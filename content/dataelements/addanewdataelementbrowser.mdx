@@ -1,0 +1,76 @@
+---
+title: 'Add a New Data Element (Browser)'
+metaTitle: 'Add a New Data Element (Browser) | Magic Pixel'
+order: 2
+---
+# Add a New Data Element (For Browser/Client-side)
+
+For Client-side or Browser-side configuration, all the information is fetched from the webpage or browser.
+Perform the following steps to create the Data elements on browser:
+1.	Click **Add Data Element (For Browser)** on the top right corner of the screen.
+
+![addnewdataelements](/images/dataelementsimages/dataelementsbrowser.png)
+
+2. Enter the following details in the New Data Element screen that appears.
+
+3. Select the Check box **Default Data Elements** to list the default data elements that are readily available in MagicPixel. The specific default template that is available will be used for the particular data elements.
+
+![addnewdataelements](/images/dataelementsimages/adddataelement.png)
+
+4. Update the **Info** section on the top-left corner of the screen.
+
+![addnewdataelements](/images/dataelementsimages/choosedataelementtype.png)
+
+| Field Name      | Description |
+| ----------- | ----------- |
+| Name      | Denotes the default Data Element Name.   |
+| Variable Name   | Denotes the variable name. <br /> **Note**: The Variable name is same as the Data Element name. |
+| Description      | Enter the description of the Data Element. |
+| Is a Language Data Element?   | |
+| Is a Privacy Compliance Data Element? |  |
+| Choose Data Element Type | Denotes the data element type. <br /> • **URL Parameter**: Denotes the parameters that are fetched from the URL. <br /> • **Launch Data Element:** <br /> • **Custom JavaScript**: Includes the Custom Java Script code that the user provides as input. The code must be included in the Custom Java Script section while adding the Data Elements. <br /> •	**MagicPixel Data Layer:** |
+
+5. You can select either the default template or custom template (user-defined) template.
+
+You must ensure to create the Data Elements in MagicPixel and then proceed further with the tag updates.
+The following table depicts the different Data Element types for both Browser-side and Server-side tag elements.
+
+| Data Element | Server | Browser | 
+| ----------- | ----------- | --------   |
+| JSON Path      | Yes      |     |
+| URL Parameter   | Yes     |   Yes |
+| MagicPixel Data Layer Element | Yes | Yes |
+| Custom Java Script | Yes | Yes |
+| Server Header | Yes |    |
+| Server Cookie | Yes |    |
+| MagicPixel Internal | Yes | Yes |
+| MagicPixel Event Timestamp | Yes | Yes |
+| MagicPixel Event Name | Yes | Yes |
+| MagicPixel Event ID | Yes | Yes |
+| MagicPixel Identity | Yes | Yes |
+
+
+**URL Parameter**
+
+Enter the following fields in the URL section of the screen.
+
+![addnewdataelements](/images/dataelementsimages/urlparameter.png)
+
+| Field Name      | Description |
+| ----------- | ----------- |
+| Parameter Name  | This is a mandatory field. Enter the parameter name.   |
+| Default value   | Represents the Default Value of the parameter. <br /> •	**Empty String**: Denotes that the data element is a string value. <br /> • **Undefined**: If the data element is not supposed to be used then select Undefined. <br /> • **Null**: Denotes the Null data type for the data element. <br />  **Custom Value**: Denotes the static value for the Data Element. |
+| Case-sensitive  | Select the Case-sensitive check box to make the default parameter case-sensitive. Else, clear the check box. |
+
+**Transformation Function**
+
+Enter the following fields in the Transformation Function section.
+
+| Field Name      | Description |
+| ----------- | ----------- |
+| Clean      |    |
+| Lower-case   |   |
+| Custom Function |  |
+| Use Custom Function |  |
+
+7.	Click **Save** to save the changes.
