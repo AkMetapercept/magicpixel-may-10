@@ -1,0 +1,12 @@
+.sidebar-container {
+  position: relative;
+  width: 300px;
+  padding-left: 0;
+  z-index: 100;
+  transition: all 0.3s ease;
+  @media (max-width: 1200px) {
+    position: fixed;
+    left: -320px;
+    /* transform: translateX(-100%); */
+  }
+}

@@ -1,0 +1,13 @@
+---
+title: 'Transformers'
+metaTitle: 'Transformers | Magic Pixel'
+order: 9
+---
+
+# Transformers
+
+The Transformers are the main building blocks of data while implementing tags with MagicPixel. There are instances where the data layer value returns an object and need to convert it into a variety of other formats to be used within tags or provider attributes. 
+
+The standard approach for other Tag Managers is to create more Data elements and format the value each time. This results in the same piece of data being redefined in various occurrences. However, if the source data changes, then you must update all the instances where it is being read and transformed to different formats. 
+
+A transformation function can accept any number of data elements as inputs, format the data, and returns it in a different format as required for a dynamic template parameter.

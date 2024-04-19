@@ -1,0 +1,64 @@
+---
+title: 'Add a New Provider (Server)'
+metaTitle: 'Add a New Provider (Server) | Magic Pixel'
+order: 3
+---
+
+# Add a New Provider (For Server-side)
+
+For Server-side configuration, all the information is fetched from the server.
+
+To add a new Provider on MagicPixel, perform the following steps:
+
+1. From the left navigation panel, select **Providers**.
+
+![addanewproviderserver](/images/providersimages/providersserver.png)
+
+2. Select **Add Provider -> For Server** on the top-right corner of the screen.
+
+![addanewproviderserver](/images/providersimages/addproviderserver.png)
+
+3. Select a Provider Template.
+
+![addanewproviderserver](/images/providersimages/providertemplateserver.png)
+
+4. Enter the Provider Name and Base URL under the Provider Details section.
+
+![addanewproviderserver](/images/providersimages/templateserver.png)
+
+5. Under the **Attributes** section, click Add Attribute at the bottom to add a new attribute. The Name, Value, and Settings information is visible.
+
+**Note**: You can set the attribute to Mandatory, Ignore If Empty, Fatal, Hash (SHA256).
+- **Mandatory**: This value is mandatory.
+- **Fatal**: This value is mandatory.
+- **Ignore If Empty**: May be ignored if the value is not set.
+- **HASH (SHA256)**: The value is converted to HASH format.
+
+![addanewproviderserver](/images/providersimages/attributesoptional.png)
+
+6.	To modify the settings, click the **Settings** icon on the bottom-right corner of the screen. 
+
+![addanewproviderserver](/images/providersimages/settings.png)
+
+7. Enter the Attribute Settings and click **Confirm** to save the changes.
+
+![addanewproviderserver](/images/providersimages/serverattributesettings.png)
+
+The following are the Data Type Conversion Types for the attributes.
+
+| Data Type      | Description |
+| ----------- | ----------- |
+| No Conversion   | Indicates that there is no conversion required for the data type.  |
+| Convert to Boolean   | Converts the input data to Boolean.     |
+| Convert to Number | Converts the input data to Number.|
+| Convert to Array | Converts the input data to Array.|
+| Convert to Object Spread | |
+
+8. To delete the attribute, click the **Delete** icon.
+9.  Enter the fields in the HTTP Headers section. This section is optional.
+
+![addanewproviderserver](/images/providersimages/httpheaders.png)
+
+10.	Enter the fields in the Connectors section and click **Save** to save the changes.
+
+![addanewproviderserver](/images/providersimages/connectors.png)

@@ -1,0 +1,62 @@
+---
+title: 'Tags Screen'
+metaTitle: 'Tags Screen | Magic Pixel'
+order: 1
+---
+
+# Tags Screen
+This section describes the Tags screen UI elements.
+
+## Filter Tags
+Filter the tags based on the following types:
+- Filter By Name: Filters the tag based on the Tag name.
+- Filter By AttributeValue: Filters the tag based on the Attribute Value.
+- Filter By MetadataAttribute: Filters the tag based on the Metadata Attribute.
+
+## All Provider Types
+The All Provider Types specify the following provider type formats:
+- All Provider Types
+- Image Tags
+- JS Tags
+
+## Filter By Providers
+The Filter By Providers option filters the tags based on the providers.
+To filter by providers, enter the Provider name in the **Provider Name** field in the Choose Providers dialog box and click **Done**.
+
+![Filterbyproviders](/images/tagsimages/chooseproviders.png)
+
+**Step Result**: All the tags associated with the Provider Name appear on the screen.
+
+## Filter by Qualification Criteria
+The Filter by Qualification Criteria option filters the tags based on the qualification criteria list mentioned in the Choose Qualification Criteria dialog box.
+You can select the applicable qualification criteria list or enter the name in the **Filter by Name** field and click **Done**.
+
+![Filterbyqualificationcriteria](/images/tagsimages/choosequalificationcriteria.png)
+
+## Filter by Triggers
+
+This option allows you to filter the tags based on the triggers list mentioned in the Choose Triggers dialog box.
+
+To filter the tags using triggers, select either User-defined triggers or Default triggers. 
+
+![Filterbytriggers](/images/triggersimages/filtertriggers.png)
+
+You can also enter the trigger name in the **Filter by Name** filed and click **Done**.
+
+## Filter by Data Elements
+The Filter by Data Elements filters the tags based on the Data Elements. You can select either **User-Defined** or **Default Data Elements**.
+To filter the tags using Data Elements, select either from the User-defined or Default data element or enter the Data Element Name in the Choose Data Elements dialog box ad click Done.
+
+## Reset Filters
+The Reset Filters option resets the filter settings applied.
+The following are the additional fields that appear on the Tags screen.
+
+| Column Name      | Description |
+| ----------- | ----------- |
+| Name      | Denotes the Tag Name.       |
+| Support   | Denotes whether the tag is a server-side or a browser-side setting.      |
+| Status | Denotes the status of the tag: <br /> • **Production**: The tag is in production status. <br /> • **Staging**: The tag is in Staging status. <br /> • **Pending Publish**: The tag is yet to be Published. |        
+| Provider | Denotes the Provider name and the format. <br /> •	**IMG**: Denotes the Provider in the Image format. <br /> •	**JS**: Denotes the Provider in the Java Script format. |
+| Validity Period | Denotes the validity period of the tag specified during the tag creation. |
+| Updated By | Specifies the user who updated the tag. |
+| ... | The Ellipses on the last column denotes whether to delete the tag or clone the tag. <br /> To delete a tag there must not be any dependencies. <br /> **Note:** You cannot delete a tag if there are any dependencies in the tag for Data Elements, Providers, Triggers, or Qualification Criteria. Only after deleting the dependent categories, you can delete the tag successfully. <br /> Even after deleting the dependencies, if you cannot delete the tag, then you must Publish the relevant categories first and then perform the delete operation.|
