@@ -497,13 +497,15 @@ export const baseStyles = css`
     padding-left: 15px;
   }
 
-  .showFrontLine .item > a:hover {
+  ${
+    '' /* .showFrontLine .item > a:hover {
     background-color: #001933;
   }
 
   .showFrontLine .active > a {
-    /* color: #fff; */
+     color: #fff; 
     background-color: #001933;
+  } */
   }
 
   .sideBarUL .item .item {
@@ -514,7 +516,8 @@ export const baseStyles = css`
     margin-left: 0 !important;
   }
 
-  .showFrontLine .item .item {
+  ${
+    '' /* .showFrontLine .item .item {
     border-left: 1px solid #e6ecf1;
     border-left-color: rgb(230, 236, 241);
     padding: 0;
@@ -527,6 +530,7 @@ export const baseStyles = css`
     border-width: 1px 0px 1px 1px;
     background-color: #1ed3c6 !important;
     color: #fff;
+  } */
   }
 
   .titleWrapper {

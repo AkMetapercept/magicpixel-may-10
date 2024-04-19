@@ -1,6 +1,5 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import config from '../config';
 
 export default class HTML extends React.Component {
   render() {
@@ -10,16 +9,8 @@ export default class HTML extends React.Component {
           <meta charSet="utf-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-          {config.siteMetadata.ogImage ? (
-            <meta property="og:image" content={config.siteMetadata.ogImage} />
-          ) : null}
-          <meta property="twitter:card" content="summary_large_image" />
-          {config.siteMetadata.ogImage ? (
-            <meta property="twitter:image" content={config.siteMetadata.ogImage} />
-          ) : null}
-          {config.siteMetadata.favicon ? (
-            <link rel="shortcut icon" type="image/svg" href={config.siteMetadata.favicon} />
-          ) : null}
+          <link rel="shortcut icon" type="image/svg" href="/magic-pixel-favicon.png" />
+
           <noscript key="noscript"></noscript>
           {this.props.headComponents}
         </head>
