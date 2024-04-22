@@ -4,7 +4,9 @@
   padding-left: 0;
   z-index: 100;
   transition: all 0.3s ease;
-  @media (max-width: 1200px) {
+}
+@media (max-width: 1200px) {
+  .sidebar-container {
     position: fixed;
     left: -320px;
     /* transform: translateX(-100%); */

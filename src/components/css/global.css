@@ -3,6 +3,9 @@
 @import url(./header.css);
 @import url(./sidebar.css);
 @import url(./landing-page.css);
+@import url(./toc.css);
+@import url(./prev-next-btn.css);
+@import url(./main-body-wrapper.css);
 
 :root {
   --white: #fff;
