@@ -6,6 +6,7 @@
 @import url(./toc.css);
 @import url(./prev-next-btn.css);
 @import url(./main-body-wrapper.css);
+@import url(./footer.css);
 
 :root {
   --white: #fff;
@@ -17,7 +18,7 @@
   --heading: #000;
   --text: #3b454e;
   --preFormattedText: rgb(245, 247, 249);
-  --link: #1000ee;
+  --link: #1b0c8a;
 }
 
 * {
@@ -468,6 +469,7 @@ blockquote {
 .hideFrontLine .active > a {
   background-color: var(--tab-bg);
   color: var(--blue) !important;
+  border-left: 2px solid;
 }
 .firstLevel ul li .collapser svg path {
   fill: var(--charcoal) !important;

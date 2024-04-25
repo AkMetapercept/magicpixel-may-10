@@ -3,9 +3,10 @@ import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import MDXRenderer from 'gatsby-plugin-mdx/mdx-renderer';
 
-import { Layout, Link } from '$components';
+import { Layout, Link, LayoutHome, LayoutOther } from '$components';
 import NextPrevious from '../components/NextPrevious';
 import config from '../../config';
+import Footer from '../components/footer/footer';
 
 const forcedNavOrder = config.sidebar.forcedNavOrder;
 
@@ -17,6 +18,7 @@ export default class MDXRuntimeTest extends Component {
       return this.props.children;
     }
     const { allMdx, mdx } = data;
+    // console.log('🚀 ~ file: docs.js:20 ~ MDXRuntimeTest ~ render ~ mdx:', mdx);
     // console.log('🚀 ~ file: docs.js:27 ~ MDXRuntimeTest ~ render ~ allMdx:', allMdx);
 
     const githubIcon = require('../components/images/github.svg').default;
@@ -74,8 +76,8 @@ export default class MDXRuntimeTest extends Component {
     //   config.gatsby.pathPrefix !== '/' ? canonicalUrl + config.gatsby.pathPrefix : canonicalUrl;
     // canonicalUrl = canonicalUrl + mdx.fields.slug;
 
-    return (
-      <Layout {...this.props} edges={allMdx.edges}>
+    return mdx?.fields?.slug === '/' ? (
+      <LayoutHome {...this.props} edges={allMdx.edges}>
         <Helmet>
           {metaTitle ? <title>{metaTitle}</title> : null}
           {metaTitle ? <meta name="title" content={metaTitle} /> : null}
@@ -87,7 +89,23 @@ export default class MDXRuntimeTest extends Component {
         <div className={'addPaddTopBottom'}>
           <NextPrevious mdx={mdx} nav={nav} allMdx={allMdx} {...this.props} />
         </div>
-      </Layout>
+        <Footer />
+      </LayoutHome>
+    ) : (
+      <LayoutOther {...this.props} edges={allMdx.edges}>
+        <Helmet>
+          {metaTitle ? <title>{metaTitle}</title> : null}
+          {metaTitle ? <meta name="title" content={metaTitle} /> : null}
+        </Helmet>
+
+        <div className="main-body-wrapper">
+          <MDXRenderer>{mdx.body}</MDXRenderer>
+        </div>
+        <div className={'addPaddTopBottom'}>
+          <NextPrevious mdx={mdx} nav={nav} allMdx={allMdx} {...this.props} />
+        </div>
+        <Footer />
+      </LayoutOther>
     );
   }
 }

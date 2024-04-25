@@ -1,0 +1,67 @@
+/* Footer styling */
+footer {
+  background-color: white;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+/* Social icon styling */
+footer .social-icons a {
+  display: flex;
+  transition: transform 0.3s ease;
+  background-color: #d0e0ff;
+  text-align: center;
+  padding: 15px;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+footer .social-icons a:hover {
+  background-color: rgb(255, 250, 241, 1);
+}
+
+/* Small text styling */
+footer small {
+  display: block;
+  color: black;
+  font-size: 14px;
+}
+
+/* Responsive styling */
+@media screen and (max-width: 768px) {
+  /* Adjust margin for social icons on smaller screens */
+  footer .social-icons {
+    margin-bottom: 10px;
+  }
+
+  /* Reduce font size for small text on smaller screens */
+  footer small {
+    font-size: 12px;
+  }
+}
+
+footer .fa-linkedin-in {
+  color: rgb(9, 134, 236);
+}
+
+footer .fa-facebook-f {
+  color: rgb(9, 134, 236);
+}
+
+footer .fa-youtube {
+  color: red;
+}
+
+footer .fa-x-twitter {
+  color: black;
+}
+
+footer hr {
+  border: 0;
+  height: 2px;
+  background-color: black;
+  margin: 20px 0;
+}

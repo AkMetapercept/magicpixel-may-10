@@ -31,3 +31,15 @@
     padding-left: 0;
   }
 }
+
+.circular-container {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: rgb(248, 234, 208);
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+}

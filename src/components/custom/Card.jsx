@@ -22,15 +22,28 @@ const MdxCard = ({ data }) => {
     <div className="card">
       <div className="card-body">
         <div className="d-flex gap-4 align-items-center">
-          <img alt={data.label} src={imageData[data.label]} width={40} />
+          <div className="imgWrapper">
+            <img className="imgicon" alt={data.label} src={imageData[data.label]} />
+          </div>
           <Link to={data.url}>
             {' '}
-            <h5 className="card-title"> {data.title}</h5>
+            <h4 className="card-title"> {data.title}</h4>
           </Link>
         </div>
       </div>
     </div>
   );
+  // <div className="card">
+  //   <div className="card-body">
+  //     <div className="d-flex gap-4 align-items-center">
+  //       <img alt={data.label} src={imageData[data.label]} width={40} />
+  //       <Link to={data.url}>
+  //         {' '}
+  //         <h5 className="card-title"> {data.title}</h5>
+  //       </Link>
+  //     </div>
+  //   </div>
+  // </div>
 };
 
 export function CardComp() {
