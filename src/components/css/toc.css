@@ -1,0 +1,51 @@
+.right-side-toc {
+  width: 100%;
+  border-right: 1px solid #ede7f3;
+  height: calc(100vh - 80px);
+  overflow: auto;
+  position: fixed;
+  padding-left: 24px;
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: sticky;
+  top: 80px;
+  background: var(--background);
+}
+
+.right-side-toc .rightSideTitle {
+  font-size: 10px;
+  line-height: 1;
+  font-weight: 700;
+  font-size: 18px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  padding: 7px 24px 7px 16px;
+  color: var(--text);
+}
+
+.right-side-toc .rightSideBarUL {
+  margin-top: 20px;
+  padding-left: 0px;
+}
+
+.right-side-toc .rightSideBarUL li {
+  list-style-type: none;
+  border-left: 1px solid #e6ecf1;
+  border-left-color: rgb(230, 236, 241);
+}
+
+.right-side-toc .rightSideBarUL li a {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+  padding: 7px 24px 7px 16px;
+  color: var(--text);
+}
+
+@media only screen and (max-width: 50rem) {
+  .right-side-toc {
+    width: 100%;
+    position: relative;
+  }
+}

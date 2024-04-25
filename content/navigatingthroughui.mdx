@@ -6,7 +6,7 @@ order: 2
 
 # Navigating Through UI
 
-This section explains the different tabs avaialble on the MagicPixel UI screen after logging in to the application.
+This section explains the different tabs available on the MagicPixel UI screen after logging in to the application.
 
 ## Products
 The **Products** section includes the list of products available for a particular project.
@@ -29,9 +29,13 @@ To add a new user, perform the following steps:
 ![addanewuser](/images/navigatingthroughuiimages/adduser.png)
 
 2.	Enter the e-mail in the **E-mail** field.
+
 3.	Enter the Full Name in the **Full Name** field.
-4.	Enter the Last name in the **Last Name** field.
-**Step Result**: Once the user is created successfully, an e-mail notification is triggered to activate the account.
+
+4.	Enter the Last name in the **Last Name** field. <br />
+
+**Step Result**: Once the user is created successfully, an e-mail notification is triggered to activate the account. <br />
+
 **Note:** If the user is still unable to activate and reset the password, admin may select the Re-invite User option to trigger the e-mail notification again.
 
 ![addanewuser](/images/navigatingthroughuiimages/info_roles.png)
@@ -67,14 +71,25 @@ and click **Save**.
 ![Deletetheroles](/images/navigatingthroughuiimages/deleteroles.png)
 
 ## Usage
-The **Usage** section displays the data usage based on the number of days. By default, the data for the last seven days appears. However, you can modify the number of days for a particular category.
+The **Usage** option includes all the real-time metrics and the data that are collected based on the number of days. By default, the data for the last seven days appears. 
+
+However, you can modify the number of days to view the metrics for a particular category.
+
+To view the usage details, select **Product -> Project -> Category**.
+
+**Note**: The Projects option is available only in Tag Manager. By default, All Projects is selected under Projects tab. 
+
+If there is no data available, then the following message appears:
+*“Metrics data is currently unavailable.”* 
+
 The following are the default user options visible:
 
 | User Options      | Description |
 | ----------- | ----------- |
-| Tag Manager    |          |
-| All Projects   |          |
-| All Categories |          |
+| Tag Manager    | In Tag Manager, there are a set of API calls triggered to MagicPixel from the client website through SDK. The Tag Manager in the Usage option includes the metrics that are collected in real-time in making the server-side API calls. The Tag Manager includes the following products: <br /> • Tag Manager <br /> • Id link |
+| All Projects | You can select the specific project to collect the metrics using the **All Projects** drop-down. |
+| All Categories | Includes the following categories to collect the metrics: <br /> • Collector API Calls <br /> •	Server-Side Tag Count <br /> •	Server-Side Tag API Calls <br /> •	Collector Bot Traffic |
+ 
 
 ![Usage](/images/navigatingthroughuiimages/usage.png)
 
@@ -85,10 +100,18 @@ The following are the details visible:
 | Collector API Calls   |  Denotes the number of API calls made by the website to MagicPixel servers.   |
 | Server-Side Tag Count   |  Denotes the number of server-side tags triggered from MagicPixel servers.  |
 | Server-Side Tag API Calls | Denotes the number of API calls made by the website to MagicPixel servers.|
- 
- ## Notifications
+| Collector Bot Traffic | Number of API calls detected as bot traffic by MagicPixel servers.|
 
-The **Notifications** section displays the notifications that are triggered for a particular user. 
+The same categories are listed under the **All Categories** drop-down to view more detailed view of the metrics. For example, to view the Collector API calls for the Last One Week, click Collector API Calls from the **All Categories** drop-down and select Last One week. To view the graphical representation for the last one month, select Last One Month and click **Refresh**.
+ 
+**Id Link**
+The ID Link as a product does not include Projects drop-down option. You can select the particular category using the **All Categories** drop-down. The only category that is available under All Categories is **First Party ID Service**.
+
+## Notifications
+
+The **Notifications** option displays the notifications that are triggered for a particular user. You can add any number of e-mail IDs for a particular Notification Group. The Notifications are triggered at the client level for alarms as well across multiple products.
+**Note**: While creation of the alarms, you can specify the notifications group to send the e-mails whenever an alarm is triggered. The two types of alarms that are triggered under Tag Manager are: <br /> •	 Tag Expiration Alarm <br /> •	 Anamoly Detection Alarm
+
 To add a new notification, perform the following steps:
 1.	Click **Add Notification** on the top-right corner of the screen.
 

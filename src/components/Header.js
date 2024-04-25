@@ -32,6 +32,8 @@ const Header = ({ location }) => {
             <Search />
           </div>
         </nav>
+
+        {/* ========for mobile view========= */}
         <div id="navbar" className={'topnav'}>
           <div className={'visibleMobile'}>
             <Sidebar location={location} />

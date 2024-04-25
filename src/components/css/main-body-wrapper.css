@@ -1,0 +1,38 @@
+.main-body-wrapper {
+  color: var(--text);
+}
+
+.main-body-wrapper ul,
+.main-body-wrapper ol {
+  -webkit-padding-start: 40px;
+  -moz-padding-start: 40px;
+  -o-padding-start: 40px;
+  margin: 24px 0px;
+  padding: 0px 0px 0px 2em;
+}
+.main-body-wrapper ul li,
+.main-body-wrapper ol li {
+  font-size: 16px;
+  line-height: 1.8;
+  font-weight: 400;
+}
+
+.main-body-wrapper a {
+  transition: color 0.15s;
+  color: var(--link);
+}
+
+.main-body-wrapper code {
+  border: 1px solid #ede7f3;
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 0.9375em;
+
+  background: var(--background);
+}
+
+@media (max-width: 767px) {
+  .main-body-wrapper {
+    padding: 0 15px;
+  }
+}

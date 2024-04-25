@@ -1,5 +1,4 @@
 require('dotenv').config();
-const queries = require('./src/utils/algolia');
 const config = require('./config');
 const plugins = [
   'gatsby-plugin-sitemap',
@@ -18,7 +17,7 @@ const plugins = [
       component: require.resolve(`./src/templates/docs.js`),
     },
   },
-  'gatsby-plugin-emotion',
+
   'gatsby-plugin-react-helmet',
   {
     resolve: 'gatsby-source-filesystem',
@@ -57,23 +56,7 @@ const plugins = [
     },
   },
 ];
-// check and add algolia
-if (
-  config.header.search &&
-  config.header.search.enabled &&
-  config.header.search.algoliaAppId &&
-  config.header.search.algoliaAdminKey
-) {
-  plugins.push({
-    resolve: `gatsby-plugin-algolia`,
-    options: {
-      appId: config.header.search.algoliaAppId, // algolia application id
-      apiKey: config.header.search.algoliaAdminKey, // algolia admin key to index
-      queries,
-      chunkSize: 10000, // default: 1000
-    },
-  });
-}
+
 // check and add pwa functionality
 if (config.pwa && config.pwa.enabled && config.pwa.manifest) {
   plugins.push({

@@ -4,9 +4,31 @@ import Link from './link';
 import config from '../../config';
 import { useSidebarContext } from '../context/sidebarContext';
 
-const NextPrevious = ({ mdx, allMdx }) => {
-  const { traversePrevNext } = useSidebarContext();
-  let nav = [];
+const NextPrevious = ({ mdx, allMdx, location }) => {
+  const { traversePrevNext, urlObject } = useSidebarContext();
+  const [nav, setNav] = React.useState([]);
+  function flatten(arr) {
+    return arr.reduce((acc, curr) => {
+      // Push the current object into the accumulator array
+      acc.push(curr);
+      // If the current object has a 'children' property which is an array, recursively flatten it
+      if (curr.items) {
+        acc.push(...flatten(curr.items));
+      }
+      return acc;
+    }, []);
+  }
+
+  let currentIndex;
+  React.useEffect(() => {
+    if (urlObject?.items) {
+      const objects = flatten(urlObject.items);
+      // if (objects) {
+      setNav(() => objects);
+      // }
+    }
+  }, [location.pathname, urlObject]);
+
   const calculateTreeData = (edges) => {
     //  (landing page to be add or not)
     const originalData = config.sidebar.ignoreIndex
@@ -101,15 +123,13 @@ const NextPrevious = ({ mdx, allMdx }) => {
     );
   };
 
-  const data = calculateTreeData(allMdx.edges);
+  // const data = calculateTreeData(allMdx.edges);
 
-  let currentIndex;
-
-  const currentPaginationInfo = nav.map((el, index) => {
-    if (el && el.url === mdx.fields.slug) {
-      currentIndex = index;
-    }
-  });
+  // const currentPaginationInfo = nav.map((el, index) => {
+  //   if (el && el.url === mdx.fields.slug) {
+  //     currentIndex = index;
+  //   }
+  // });
   // currentPaginationInfo();
 
   const nextInfo = {};
@@ -146,6 +166,8 @@ const NextPrevious = ({ mdx, allMdx }) => {
       previousInfo.title = nav[currentIndex - 1].title;
     }
   }
+
+  console.log('Data========', currentIndex, nextInfo, previousInfo);
 
   return (
     <div className="next-prev-section">

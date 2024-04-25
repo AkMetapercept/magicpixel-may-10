@@ -9,21 +9,11 @@ import Header from './Header.js';
 import HomeBanner from './home-banner.js';
 import Footer from './footer/footer.js';
 
-const Layout = ({ children, location, edges }) => {
-  const [displayBanner, setDisplayBanner] = React.useState(false);
-
-  // Check if window is defined (so if in the browser or in node.js).
-  const isBrowser = typeof window !== 'undefined';
-  React.useEffect(() => {
-    if (isBrowser) {
-      setDisplayBanner(() => (window?.location?.pathname === '/' ? true : false));
-    }
-  });
-
+const LayoutOther = ({ children, location, edges }) => {
   return (
     <SidebarContextProvide edges={edges}>
       <Header location={location} />
-      {displayBanner && <HomeBanner />}
+      {/* {displayBanner && <HomeBanner />} */}
       {/* <div className="landing-container">
           <div>
             <h1>Magic Pixel</h1>
@@ -40,16 +30,15 @@ const Layout = ({ children, location, edges }) => {
 
             <div className="col">
               <main>
-                {!displayBanner && <Breadcrumb location={location} key={location.pathname} />}
+                <Breadcrumb location={location} key={location.pathname} />
                 {children}
               </main>
-              <Footer />
+              {/* <Footer /> */}
             </div>
-            {!displayBanner && (
-              <div className="d-none d-lg-block" style={{ width: '300px' }}>
-                <RightSidebar location={location} />
-              </div>
-            )}
+
+            <div className="d-none d-lg-block" style={{ width: '300px' }}>
+              <RightSidebar location={location} />
+            </div>
           </div>
         </section>
       </MDXProvider>
@@ -57,4 +46,4 @@ const Layout = ({ children, location, edges }) => {
   );
 };
 
-export default Layout;
+export default LayoutOther;
