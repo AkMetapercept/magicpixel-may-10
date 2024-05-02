@@ -10,15 +10,27 @@ import HomeBanner from './home-banner.js';
 import Footer from './footer/footer.js';
 
 const LayoutHome = ({ children, location, edges }) => {
-  // const [displayBanner, setDisplayBanner] = React.useState(false);
+  const sidebarRef = React.useRef(null);
 
-  // Check if window is defined (so if in the browser or in node.js).
-  // const isBrowser = typeof window !== 'undefined';
-  // React.useEffect(() => {
-  //   if (isBrowser) {
-  //     setDisplayBanner(() => (window?.location?.pathname === '/' ? true : false));
-  //   }
-  // });
+  React.useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+        let sidebar = sidebarRef.current;
+        const computedStyle = window.getComputedStyle(sidebar);
+        const leftValue = computedStyle.getPropertyValue('left');
+        const position = computedStyle.getPropertyValue('position');
+        if (leftValue == '0px' && position == 'fixed') {
+          sidebar.style.left = '-320px';
+        }
+      }
+    };
+
+    document.addEventListener('click', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
 
   return (
     <SidebarContextProvide edges={edges}>
@@ -34,11 +46,11 @@ const LayoutHome = ({ children, location, edges }) => {
       <MDXProvider components={mdxComponents}>
         <section className="container-fluid">
           <div className="row">
-            <div className="sidebar-container">
+            <div className="sidebar-container" ref={sidebarRef}>
               <Sidebar location={location} />
             </div>
 
-            <div className="col">
+            <div className="col pt-4">
               <main>{children}</main>
               {/* <Footer /> */}
             </div>

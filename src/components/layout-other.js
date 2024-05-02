@@ -10,6 +10,27 @@ import HomeBanner from './home-banner.js';
 import Footer from './footer/footer.js';
 
 const LayoutOther = ({ children, location, edges }) => {
+  const sidebarRef = React.useRef(null);
+
+  React.useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+        let sidebar = sidebarRef.current;
+        const computedStyle = window.getComputedStyle(sidebar);
+        const leftValue = computedStyle.getPropertyValue('left');
+        const position = computedStyle.getPropertyValue('position');
+        if (leftValue == '0px' && position == 'fixed') {
+          sidebar.style.left = '-320px';
+        }
+      }
+    };
+
+    document.addEventListener('click', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
   return (
     <SidebarContextProvide edges={edges}>
       <Header location={location} />
@@ -24,7 +45,7 @@ const LayoutOther = ({ children, location, edges }) => {
       <MDXProvider components={mdxComponents}>
         <section className="container-fluid">
           <div className="row">
-            <div className="sidebar-container">
+            <div className="sidebar-container" ref={sidebarRef}>
               <Sidebar location={location} />
             </div>
 

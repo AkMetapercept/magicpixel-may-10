@@ -885,3 +885,7 @@ main {
 main table tr {
   background: var(--background);
 }
+
+.scroll-margin-top {
+  scroll-margin-top: 85px;
+}
