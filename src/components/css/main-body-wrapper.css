@@ -17,7 +17,8 @@
   font-weight: 400;
 }
 
-.main-body-wrapper a {
+.main-body-wrapper a,
+.main-body-wrapper a h4 {
   transition: color 0.15s;
   color: var(--link);
 }

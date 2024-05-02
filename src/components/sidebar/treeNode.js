@@ -8,6 +8,8 @@ import { useSidebarContext } from '../../context/sidebarContext';
 const imageData = {
   Introduction: '/landing-page/icons/introduction.png',
   'Navigating Through UI': '/landing-page/icons/navigation-ui.png',
+  Dashboard: '/landing-page/icons/dashboard.png',
+  Reports: '/landing-page/icons/report.png',
   'Add a New Project': '/landing-page/icons/new-project.png',
   Tags: '/landing-page/icons/tags.png',
   'Data Elements': '/landing-page/icons/data-element.png',

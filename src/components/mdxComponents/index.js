@@ -28,42 +28,42 @@ const appendString = (children) => {
 export default {
   h1: (props) => (
     <h1
-      className="heading1"
+      className="heading1 scroll-margin-top"
       id={appendString(props.children).replace(/\s+/g, '').toLowerCase()}
       {...props}
     />
   ),
   h2: (props) => (
     <h2
-      className="heading2"
+      className="heading2 scroll-margin-top"
       id={appendString(props.children).replace(/\s+/g, '').toLowerCase()}
       {...props}
     />
   ),
   h3: (props) => (
     <h3
-      className="heading3"
+      className="heading3 scroll-margin-top"
       id={appendString(props.children).replace(/\s+/g, '').toLowerCase()}
       {...props}
     />
   ),
   h4: (props) => (
     <h4
-      className="heading4"
+      className="heading4 scroll-margin-top"
       id={appendString(props.children).replace(/\s+/g, '').toLowerCase()}
       {...props}
     />
   ),
   h5: (props) => (
     <h5
-      className="heading5"
+      className="heading5 scroll-margin-top"
       id={appendString(props.children).replace(/\s+/g, '').toLowerCase()}
       {...props}
     />
   ),
   h6: (props) => (
     <h6
-      className="heading6"
+      className="heading6 scroll-margin-top"
       id={appendString(props.children).replace(/\s+/g, '').toLowerCase()}
       {...props}
     />

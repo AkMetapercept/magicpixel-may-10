@@ -5,6 +5,8 @@ import { useSidebarContext } from '../../context/sidebarContext';
 const imageData = {
   aboutmagicpixel: '/landing-page/icons/introduction.png',
   navigatingthroughui: '/landing-page/icons/navigation-ui.png',
+  dashboard: '/landing-page/icons/dashboard.png',
+  reports: '/landing-page/icons/report.png',
   addanewproject: '/landing-page/icons/new-project.png',
   tags: '/landing-page/icons/tags.png',
   dataelements: '/landing-page/icons/data-element.png',
@@ -19,19 +21,18 @@ const imageData = {
 const MdxCard = ({ data }) => {
   console.log('🚀 ~ file: Card.jsx:20 ~ MdxCard ~ data:', data);
   return (
-    <div className="card">
-      <div className="card-body">
-        <div className="d-flex gap-4 align-items-center">
-          <div className="imgWrapper">
-            <img className="imgicon" alt={data.label} src={imageData[data.label]} />
-          </div>
-          <Link to={data.url}>
-            {' '}
+    <Link to={data.url}>
+      <div className="card">
+        <div className="card-body">
+          <div className="d-flex gap-4 align-items-center">
+            <div className="imgWrapper">
+              <img className="imgicon" alt={data.label} src={imageData[data.label]} />
+            </div>
             <h4 className="card-title"> {data.title}</h4>
-          </Link>
+          </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
   // <div className="card">
   //   <div className="card-body">
