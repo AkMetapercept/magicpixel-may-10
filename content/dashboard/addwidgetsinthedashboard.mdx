@@ -1,0 +1,70 @@
+---
+title: 'Add Widgets in the Dashboard'
+metaTitle: 'Add Widgets in the Dashboard | Magic Pixel'
+order: 3
+---
+
+# Add Widgets in the Dashboard
+
+Perform the following steps to create widgets in the Dashboard:
+
+1.	Follow the procedure "Create a New Dashboard" to create a new dashboard.
+
+2.	Click **Add Widgets**.
+
+3.	Select one of the following Visualization Types and configure the settings on how the data is displayed:
+- Line Chart
+- Tags Fired Counter
+- Pie Chart
+
+4.	Select Line Chart and set the aggregation attributes to one of the following types:
+
+| Aggregation Attribute      | Description |
+| ----------- | ----------- |
+|Browser      | Select this option to display information regarding the Browser types such as **Chrome, Safari, Edge, IE, Firefox, Opera, and Other**. |
+| Device Type   | Select this option to display the device type such as Desktop Web, Mobile Web, Tablet, and Other.  |
+| Language | Select this option to set the preferred language. The available languages are **English**, **Spanish**, and **Other**. |
+| Tag Validation Failures | The tags which failed mandatory attributes validation.|
+| Tag Fire Status | Select this option to set to one of the Tag Fire Statuses. |
+
+5.	Click **Add Filter** and select the Filter conditions to add a filter criterion of what information is being filtered.
+
+![addwidget](/images/dashboardimages/addfilter.png)
+
+| Field Type      | Description |
+| ----------- | ----------- |
+|Tag      | Specifies the tag that needs to be filtered.|
+|Page Name   | Specifies the Page Name. Select either **contains** or **is** from the Operator drop-down menu. |
+| Provider | Specifies the Provider that needs to be filtered. |
+| Device Type | Select this option to display the device type such as **Desktop Web, Mobile Web, Tablet,** and **Other**.|
+| Browser | Select this option to display information regarding the Browser types such as **Chrome, Safari, Edge, IE, Firefox, Opera,** and **Other**.|
+|Language | Select this option to set the preferred language. |
+| Domain | Select the appropriate domain name. Select either **contains** or **is** from the Operator drop-down menu. |
+| Status | Select this option to set to one of the Tag Fire Statuses. <br /> • Success (200) <br /> • Success (202) <br /> • Provider Side Failure (400) <br /> • Provider Side Failure (404) <br /> • Provider Side Failure (500) <br /> • Tag Validation Failure (900) <br /> • Tag Validation Failure (1000) <br /> • Error (1001) <br /> • Privacy Blocked (1002) <br /> • Skipped (1003) <br /> • Success with Warnings (1004) <br /> • Scheduled for retry (1005) <br /> • Maximum retry attempts reached (1006) <br /> • Delayed (1007) |
+
+6.	Select one of the following operators:
+- Is one of 
+- Is not one of
+
+7.	Click the arrow icon and select the filter to be apply to a particular field type specified.
+
+![addwidget](/images/dashboardimages/addfilterselect.png)
+
+8.	Click **Add Filter** to add the filter conditions.
+
+![addwidget](/images/dashboardimages/filtercondition.png)
+
+9.	Enter the Widget Name and Description under the **Widget Info** section and click **Save**.
+
+![addwidget](/images/dashboardimages/widgetinfo.png)
+
+**Step Result:** The new widget is added successfully.
+
+![addwidget](/images/dashboardimages/successwidget.png)
+
+As per the current filter conditions applied, the information is displayed in the **Dashboard** screen for a default time period of 24 hours. You can also specify a time range to display the information for a specific time period and click **Refresh**.
+
+![addwidget](/images/dashboardimages/timerange.png)
+
+10.	You can perform the same steps as explained in this procedure for **Tags Fired Counter** and **Pie Chart**.
+

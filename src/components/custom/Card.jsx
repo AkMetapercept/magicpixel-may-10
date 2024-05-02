@@ -5,6 +5,8 @@ import { useSidebarContext } from '../../context/sidebarContext';
 const imageData = {
   aboutmagicpixel: '/landing-page/icons/introduction.png',
   navigatingthroughui: '/landing-page/icons/navigation-ui.png',
+  dashboard: '/landing-page/icons/dashboard.png',
+  reports: '/landing-page/icons/report.png',
   addanewproject: '/landing-page/icons/new-project.png',
   tags: '/landing-page/icons/tags.png',
   dataelements: '/landing-page/icons/data-element.png',
