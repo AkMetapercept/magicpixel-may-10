@@ -1,7 +1,7 @@
 import * as React from 'react';
 // import styled from '@emotion/styled';
 
-import CodeBlock from './codeBlock';
+// import CodeBlock from './codeBlock';
 import AnchorTag from './anchor';
 
 // const StyledPre = styled('pre')`
@@ -74,7 +74,7 @@ export default {
     <pre {...props} />
     // </StyledPre>
   ),
-  code: CodeBlock,
+  // code: CodeBlock,
   a: AnchorTag,
   // TODO add `img`
   // TODO add `blockquote`

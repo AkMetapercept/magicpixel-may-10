@@ -6,11 +6,10 @@ import RightSidebar from './rightSidebar';
 import { SidebarContextProvide } from '../context/sidebarContext.jsx';
 import Breadcrumb from './custom/breadcrumb/breadcrumb.jsx';
 import Header from './Header.js';
-import HomeBanner from './home-banner.js';
-import Footer from './footer/footer.js';
 import Search2 from './custom/search/search-2.jsx';
+import Seo from './seo.js';
 
-const LayoutOther = ({ children, location, edges }) => {
+const LayoutOther = ({ children, location, edges, metaTitle }) => {
   const sidebarRef = React.useRef(null);
 
   React.useEffect(() => {
@@ -20,7 +19,7 @@ const LayoutOther = ({ children, location, edges }) => {
         const computedStyle = window.getComputedStyle(sidebar);
         const leftValue = computedStyle.getPropertyValue('left');
         const position = computedStyle.getPropertyValue('position');
-        if (leftValue == '0px' && position == 'fixed') {
+        if (leftValue === '0px' && position === 'fixed') {
           sidebar.style.left = '-320px';
         }
       }
@@ -34,6 +33,7 @@ const LayoutOther = ({ children, location, edges }) => {
   }, []);
   return (
     <SidebarContextProvide edges={edges}>
+      <Seo title={metaTitle} />
       <Header location={location} />
       <Search2 />
       {/* {displayBanner && <HomeBanner />} */}
@@ -70,3 +70,5 @@ const LayoutOther = ({ children, location, edges }) => {
 };
 
 export default LayoutOther;
+
+// export const Head = () =>

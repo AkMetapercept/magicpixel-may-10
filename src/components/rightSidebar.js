@@ -35,7 +35,7 @@ const SidebarLayout = ({ location }) => (
       };
 
       if (allMdx.edges !== undefined && allMdx.edges.length > 0) {
-        const navItems = allMdx.edges.map((item, index) => {
+        allMdx.edges.map((item, index) => {
           if (item !== undefined) {
             if (
               item.node.fields.slug === location.pathname ||

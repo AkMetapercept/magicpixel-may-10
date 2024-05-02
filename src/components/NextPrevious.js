@@ -19,7 +19,7 @@ const NextPrevious = ({ mdx, allMdx }) => {
         )
       : edges;
 
-    const tree = originalData.reduce(
+    originalData.reduce(
       (
         accu,
         {
@@ -101,11 +101,11 @@ const NextPrevious = ({ mdx, allMdx }) => {
     );
   };
 
-  const data = calculateTreeData(allMdx.edges);
+  calculateTreeData(allMdx.edges);
 
   let currentIndex;
 
-  const currentPaginationInfo = nav.map((el, index) => {
+  nav.map((el, index) => {
     if (el && el.url === mdx.fields.slug) {
       currentIndex = index;
     }

@@ -60,7 +60,7 @@ const TreeNode = ({ className = '', url, title, items, ...rest }) => {
         <Link to={url} onClick={collapse}>
           {getImageForTitle(title) && (
             <div className="circular-container">
-              <img src={getImageForTitle(title)} />
+              <img src={getImageForTitle(title)} alt={title} />
             </div>
           )}
           {title}

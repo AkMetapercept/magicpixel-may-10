@@ -10,7 +10,7 @@ const toggleSidebar = () => {
   let sidebar = document.querySelector('.sidebar-container');
   const computedStyle = window.getComputedStyle(sidebar);
   const leftValue = computedStyle.getPropertyValue('left');
-  if (leftValue == '0px') {
+  if (leftValue === '0px') {
     sidebar.style.left = '-320px';
   } else {
     sidebar.style.left = '0px';

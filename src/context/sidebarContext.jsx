@@ -40,7 +40,7 @@ export const SidebarContextProvide = ({ children, edges }) => {
       let newData = {};
       Object.keys(prev).map((link) => {
         if (url?.startsWith(link)) {
-          if (url == link && !prev[link]) {
+          if (url === link && !prev[link]) {
             newData[link] = true;
           } else {
             newData[link] = false;
