@@ -44,9 +44,8 @@ const TreeNode = ({ className = '', url, title, items, ...rest }) => {
   if (typeof window !== 'undefined') {
     location = window.location;
   }
-
   const active =
-    location && (location.pathname === url || location.pathname === config.gatsby.pathPrefix + url);
+    location && (location.pathname === url || location.pathname === url + config.gatsby.pathPrefix);
 
   const calculatedClassName = `${className} item ${active ? 'active' : ''}`;
 

@@ -2,8 +2,10 @@
   position: relative;
   width: 100%;
   height: 300px;
-  background-image: url('/landing-page/banner.jpg');
+  background-image: url('/landing-page/banner2.png');
+  /* background-image: url('/landing-page/banner.jpg'); */
   background-size: cover;
+  background-position: bottom right;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,4 +86,10 @@
 
 .card:hover .imgWrapper {
   background-color: white;
+}
+
+@media (max-width: 767px) {
+  .landing-container {
+    background-position: top left;
+  }
 }

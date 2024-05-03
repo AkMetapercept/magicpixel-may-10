@@ -5,7 +5,7 @@ import Sidebar from './sidebar';
 import RightSidebar from './rightSidebar';
 import { SidebarContextProvide } from '../context/sidebarContext.jsx';
 import Breadcrumb from './custom/breadcrumb/breadcrumb.jsx';
-import Header from './Header.js';
+import Header from './header/Header.js';
 import Search2 from './custom/search/search-2.jsx';
 import Seo from './seo.js';
 
@@ -35,7 +35,7 @@ const LayoutOther = ({ children, location, edges, metaTitle }) => {
     <SidebarContextProvide edges={edges}>
       <Seo title={metaTitle} />
       <Header location={location} />
-      <Search2 />
+      {/* <Search2 /> */}
       {/* {displayBanner && <HomeBanner />} */}
       {/* <div className="landing-container">
           <div>

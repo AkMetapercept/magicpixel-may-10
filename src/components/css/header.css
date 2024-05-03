@@ -1,17 +1,230 @@
-.sidebar-container {
-  position: relative;
-  width: 300px;
-  padding-left: 0;
-  z-index: 100;
-  transition: all 0.3s ease;
+header {
+  background-color: var(--white);
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  padding: 15px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
 }
-@media (max-width: 1200px) {
-  .sidebar-container {
-    position: fixed;
-    left: -320px;
-    top: 80px;
-    /* transform: translateX(-100%); */
-  }
+header .fill-header-hight {
+  height: 80px;
+}
+header .navBarHeader,
+header .navBarBrand {
+  display: flex;
+  align-items: center;
+}
+
+header .navBarBrand img {
+  width: 200px;
+  margin-right: 6px;
+  display: inline-block;
 }
 
 /* #F44424 */
+header .social-icons a {
+  width: 35px;
+  height: 35px;
+  background-color: var(--faint-blue);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--blue);
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+header .social-icons a:hover {
+  color: var(--main-orange);
+}
+
+/* =================== theme toggle ===================== */
+
+header .switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 64px;
+  height: 34px;
+}
+
+header .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+header .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #73c0fc;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+header .slider:before {
+  position: absolute;
+  content: '';
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
+  left: 2px;
+  bottom: 2px;
+  z-index: 2;
+  background-color: #e8e8e8;
+  transition: 0.4s;
+}
+
+header .sun svg {
+  position: absolute;
+  top: 6px;
+  left: 36px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+}
+
+header .moon svg {
+  fill: #73c0fc;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+}
+
+/* .switch:hover */
+header .sun svg {
+  animation: rotate 15s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* .switch:hover */
+header .moon svg {
+  animation: tilt 5s linear infinite;
+}
+
+@keyframes tilt {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-10deg);
+  }
+
+  75% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+header .input:checked + .slider {
+  background-color: #183153;
+}
+
+header .input:focus + .slider {
+  box-shadow: 0 0 1px #183153;
+}
+
+header .input:checked + .slider:before {
+  transform: translateX(30px);
+}
+/* =================== theme toggle ===================== */
+
+/* ======================search input ======================= */
+header .top-search-box {
+  width: 200px;
+}
+.form-control:hover {
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+  outline: none;
+}
+header .search-form {
+  position: relative;
+  width: 100%;
+}
+header .search-form .search-input {
+  font-size: 0.875rem;
+  border-radius: 1.5rem;
+  padding-right: 3rem;
+  padding-left: 1.5rem;
+  height: 40px;
+  border-color: var(--faint-blue);
+}
+
+header .search-form .search-input:hover {
+  border-color: #e7e9ed;
+  cursor: pointer;
+}
+header .search-form .search-btn {
+  color: #828d9f;
+  background: none;
+  border: none;
+  position: absolute;
+  right: 0;
+  top: 0.15rem;
+  margin-right: 0;
+}
+/* ======================search input ======================= */
+/* ======================search modal========================= */
+header .modal {
+  background-color: #00000098;
+}
+header .modal-dialog {
+  margin-top: 80px;
+}
+.modal-body {
+  height: auto;
+  width: auto;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.modal-header input {
+  padding-left: 15px;
+  padding-right: 15px;
+  border: 0.5px solid gray;
+  outline: none;
+  border-radius: 8px !important;
+}
+
+.closeicon {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  border: none;
+  background-color: white;
+  transform: translateY(-50%);
+}
+header .result-ul a {
+  color: var(--charcoal);
+}
+header .result-ul li:hover a {
+  color: var(--main-blue);
+}
+header .result-ul li:hover {
+  background-color: var(--faint-blue);
+}
+/* ======================search modal========================= */

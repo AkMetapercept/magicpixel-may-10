@@ -3,7 +3,7 @@ import { MDXProvider } from '@mdx-js/react';
 import mdxComponents from './mdxComponents';
 import Sidebar from './sidebar';
 import { SidebarContextProvide } from '../context/sidebarContext.jsx';
-import Header from './Header.js';
+import Header from './header/Header.js';
 import HomeBanner from './home-banner.js';
 import Seo from './seo.js';
 

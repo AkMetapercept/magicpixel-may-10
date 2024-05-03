@@ -7,7 +7,7 @@ import NextPrevious from '../components/NextPrevious';
 import config from '../../config';
 import Footer from '../components/footer/footer';
 
-const forcedNavOrder = config.sidebar.forcedNavOrder;
+// const forcedNavOrder = config.sidebar.forcedNavOrder;
 
 export default class MDXRuntimeTest extends Component {
   render() {
@@ -26,9 +26,9 @@ export default class MDXRuntimeTest extends Component {
 
     navItems.reduce(
       (acc, cur) => {
-        if (forcedNavOrder.find((url) => url === cur)) {
-          return { ...acc, [cur]: [cur] };
-        }
+        // if (forcedNavOrder.find((url) => url === cur)) {
+        //   return { ...acc, [cur]: [cur] };
+        // }
 
         let prefix = cur.split('/')[1];
 
@@ -36,27 +36,27 @@ export default class MDXRuntimeTest extends Component {
           prefix = prefix + '/';
         }
 
-        if (prefix && forcedNavOrder.find((url) => url === `/${prefix}`)) {
-          return { ...acc, [`/${prefix}`]: [...acc[`/${prefix}`], cur] };
-        } else {
-          return { ...acc, items: [...acc.items, cur] };
-        }
+        // if (prefix && forcedNavOrder.find((url) => url === `/${prefix}`)) {
+        //   return { ...acc, [`/${prefix}`]: [...acc[`/${prefix}`], cur] };
+        // } else {
+        return { ...acc, items: [...acc.items, cur] };
+        // }
       },
       { items: [] }
     );
 
-    const nav = forcedNavOrder
-      .reduce((acc, cur) => {
-        return acc.concat(navItems[cur]);
-      }, [])
-      .concat(navItems.items)
-      .map((slug) => {
-        if (slug) {
-          const { node } = allMdx.edges.find(({ node }) => node.fields.slug === slug);
+    // const nav = forcedNavOrder
+    //   .reduce((acc, cur) => {
+    //     return acc.concat(navItems[cur]);
+    //   }, [])
+    // .concat(navItems.items)
+    const nav = navItems?.items?.map((slug) => {
+      if (slug) {
+        const { node } = allMdx.edges.find(({ node }) => node.fields.slug === slug);
 
-          return { title: node.fields.title, url: node.fields.slug };
-        }
-      });
+        return { title: node.fields.title, url: node.fields.slug };
+      }
+    });
 
     // meta tags
     const metaTitle = mdx.frontmatter.metaTitle;
@@ -87,12 +87,6 @@ export default class MDXRuntimeTest extends Component {
 
 export const pageQuery = graphql`
   query ($id: String!) {
-    site {
-      siteMetadata {
-        title
-        docsLocation
-      }
-    }
     mdx(fields: { id: { eq: $id } }) {
       fields {
         id

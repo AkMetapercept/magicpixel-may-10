@@ -25,14 +25,14 @@ const Search2 = () => {
   const [results, setResults] = useState([]);
   const allLinksData = [];
 
-  data.allMdx.nodes.map((node) => {
+  data.allMdx.nodes.forEach((node) => {
     allLinksData.push({
       title: node?.frontmatter?.title,
       url: node?.fields?.slug,
     });
 
     if (node?.headings.length > 0) {
-      node.headings.map((heading) => {
+      node.headings.forEach((heading) => {
         const idPath = heading?.value.replace(/\s+/g, '').toLowerCase();
 
         allLinksData.push({

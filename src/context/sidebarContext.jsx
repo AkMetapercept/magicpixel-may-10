@@ -17,7 +17,7 @@ const isBrowser = typeof window !== 'undefined';
 export const SidebarContextProvide = ({ children, edges }) => {
   const setDefaultCollapsed = () => {
     const defaultCollapsed = {};
-    edges.map(({ node: { fields } }) => {
+    edges.forEach(({ node: { fields } }) => {
       // console.log(fields);
       if (isBrowser) {
         if (window.location.pathname.startsWith(fields.slug)) {
@@ -38,7 +38,7 @@ export const SidebarContextProvide = ({ children, edges }) => {
   const toggle = (url) => {
     setCollapsed((prev) => {
       let newData = {};
-      Object.keys(prev).map((link) => {
+      Object.keys(prev).forEach((link) => {
         if (url?.startsWith(link)) {
           if (url === link && !prev[link]) {
             newData[link] = true;
@@ -55,7 +55,7 @@ export const SidebarContextProvide = ({ children, edges }) => {
   const traversePrevNext = (url) => {
     setCollapsed((prev) => {
       let newData = {};
-      Object.keys(prev).map((link) => {
+      Object.keys(prev).forEach((link) => {
         if (url?.startsWith(link)) {
           newData[link] = false;
         } else {

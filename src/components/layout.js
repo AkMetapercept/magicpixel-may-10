@@ -5,7 +5,7 @@ import Sidebar from './sidebar';
 import RightSidebar from './rightSidebar';
 import { SidebarContextProvide } from '../context/sidebarContext.jsx';
 import Breadcrumb from './custom/breadcrumb/breadcrumb.jsx';
-import Header from './Header.js';
+import Header from './header/Header.js';
 import HomeBanner from './home-banner.js';
 import Footer from './footer/footer.js';
 
