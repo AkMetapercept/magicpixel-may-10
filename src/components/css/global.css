@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 @import url(./header.css);
 @import url(./sidebar.css);
 @import url(./landing-page.css);
@@ -19,6 +20,12 @@
   --text: #3b454e;
   --preFormattedText: rgb(245, 247, 249);
   --link: #1b0c8a;
+  /* =================== */
+  --main-blue: #1b008e;
+  --blue: rgb(9, 134, 236);
+  --main-orange: #f44424;
+  --faint-blue: #bbd2ff;
+  --faint-orange: #ee7c6a;
 }
 
 * {
@@ -27,35 +34,38 @@
   box-sizing: border-box;
   font-display: swap;
 }
-::-webkit-input-placeholder {
-  /* Edge */
-  color: #c2c2c2;
-}
 
-:-ms-input-placeholder {
-  /* Internet Explorer */
-  color: #c2c2c2;
-}
-
-::placeholder {
-  color: #c2c2c2;
-}
 html,
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Roboto Light', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif,
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-
+  font-family: 'Jost', sans-serif;
   font-size: 16px;
   scroll-behavior: smooth;
+  letter-spacing: 0.01em;
 }
 
 a {
   transition: color 0.15s;
 }
 
-body {
-  font-family: 'Roboto';
+::placeholder {
+  color: #c2c2c2;
+}
+
+pre {
+  border: 0 !important;
+  background-color: rgb(245, 247, 249); /* !important; */
+}
+
+blockquote {
+  color: rgb(116, 129, 141);
+  margin: 0px 0px 24px;
+  padding: 0px 0px 0px 12px;
+  border-left: 4px solid rgb(230, 236, 241);
+  border-color: rgb(230, 236, 241);
+}
+
+body li {
+  list-style-type: none;
 }
 .visibleMobile {
   display: none;
@@ -151,12 +161,6 @@ a:hover {
   background-color: #001933;
 }
 
-.headerWrapper {
-  border-bottom: 1px solid rgb(212, 218, 223);
-  box-shadow: rgba(116, 129, 141, 0.1) 0px 1px 1px 0px;
-  display: flex;
-  align-items: center;
-}
 .formElement {
   background-color: transparent;
   padding: 4px;
@@ -235,23 +239,7 @@ a:hover {
   color: black;
   font-size: 14px;
 }
-.headerTitle {
-  height: auto;
-  font-size: 16px;
-  line-height: 1.5;
-  font-weight: 300;
-  color: #fff !important;
-  margin-top: 16px;
-  text-transform: uppercase;
-}
-.headerTitle a {
-  color: #fff;
-}
 
-.headerTitle a:hover {
-  text-decoration: none;
-  opacity: 0.8;
-}
 .logoWrapper {
   padding: 21px 0;
   padding-left: 20px;
@@ -266,120 +254,6 @@ a:hover {
   padding-right: 10px;
 }
 
-/* Header section starts here */
-.removePadd {
-  padding: 0 !important;
-}
-header {
-  background-color: var(--white);
-  box-shadow: -1px 0px 4px 1px rgba(0, 0, 0, 0.4);
-  z-index: 999;
-  padding: 15px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 80px;
-}
-.fill-header-hight {
-  height: 80px;
-}
-.navBarHeader {
-  min-width: 335px;
-  padding-right: 20px;
-  display: flex;
-  align-items: center;
-}
-.navBarBrand {
-  padding: 0px 0px;
-  display: flex;
-  align-items: center;
-}
-
-.navBarBrand img {
-  width: 200px;
-  margin-right: 6px;
-  display: inline-block;
-}
-.navBarUL li {
-  list-style-type: none;
-}
-.navBarUL {
-  -webkit-overflow-scrolling: touch;
-}
-.navBarUL li a {
-  font-family: 'Roboto';
-  color: #fff !important;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1em;
-  opacity: 1;
-  padding: 10px 15px;
-}
-.navBarNav {
-  display: flex;
-  align-items: center;
-}
-.navBarUL li a img,
-.navBarUL li a .shareIcon {
-  width: 20px;
-}
-.navBarUL li a:hover {
-  opacity: 0.7;
-}
-pre {
-  border: 0 !important;
-  background-color: rgb(245, 247, 249); /* !important; */
-}
-
-blockquote {
-  color: rgb(116, 129, 141);
-  margin: 0px 0px 24px;
-  padding: 0px 0px 0px 12px;
-  border-left: 4px solid rgb(230, 236, 241);
-  border-color: rgb(230, 236, 241);
-}
-.socialWrapper {
-  display: flex;
-  align-items: center;
-}
-.socialWrapper li {
-  display: inline-block;
-}
-.socialWrapper li a {
-  display: contents;
-}
-.discordBtn,
-.twitterBtn {
-  border-radius: 4px;
-  border: solid 1px #d1d2d3;
-  background-color: #f1f5f8;
-  width: 20px;
-  height: 20px;
-  padding-top: 2px;
-  margin-left: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0.8;
-  cursor: pointer;
-}
-.twitterBtn img {
-  width: 12px !important;
-}
-.discordBtn img {
-  width: 10px !important;
-}
-.discordBtn:hover,
-.twitterBtn:hover {
-  opacity: 1;
-}
-.discordBtn {
-  img {
-    width: 10px;
-  }
-}
-/* Header section ends here */
 .sidebarTitle {
   /* box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16); */
   background-color: #f8f8f8;
@@ -406,24 +280,6 @@ blockquote {
   background-color: #1cd3c6;
   border-radius: 50%;
   margin: 0 12px;
-}
-
-.headerNav {
-  font-family: 'Roboto';
-  padding: 0px 24px;
-  color: #001933;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1em;
-}
-
-.headerNav a {
-  color: #001933;
-  text-decoration: none;
-}
-
-.headerNav a:hover {
-  text-decoration: none;
 }
 
 .logoWrapper img {
@@ -736,26 +592,12 @@ img {
   .searchInput {
     color: #001934;
   }
-  .socialWrapper {
-    position: absolute;
-    right: 10px;
-    top: 29px;
-  }
+
   .responsive {
     margin-top: 15px;
     position: relative;
     padding-bottom: 20px;
     border-top: 1px solid #fff;
-  }
-  .headerTitle {
-    padding-right: 50px;
-    font-size: 16px;
-  }
-  .navBarBrand {
-    min-height: 40px;
-  }
-  .navBarBrand img {
-    margin-right: 8px;
   }
 
   .topnav .navBarUL {
@@ -779,21 +621,6 @@ img {
     margin-top: 20px;
     margin-bottom: 20px;
   }
-  .navBarULRight {
-    position: static;
-  }
-  .navBarUL {
-    display: flex;
-    align-items: center;
-    margin: 7.5px 0px;
-  }
-  .navBarUL li {
-    height: 37px;
-  }
-  .navBarUL li a {
-    font-size: 14px;
-    padding: 10px 15px;
-  }
 
   .navBarToggle {
     margin-right: 0;
@@ -802,21 +629,6 @@ img {
     left: 11px;
     top: 15px;
     background: #fff;
-  }
-
-  .navBarHeader {
-    display: flex;
-    min-width: auto;
-    padding-right: 0;
-    align-items: center;
-  }
-
-  .navBarBrand {
-    font-size: 20px;
-    padding: 0 0;
-    padding-left: 0;
-    flex: initial;
-    padding-right: 15px;
   }
 
   .titleWrapper {
@@ -853,13 +665,6 @@ img {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .navBarBrand {
-    font-size: 22px;
-  }
-  .navBarHeader {
-    min-width: 240px;
-    flex: initial;
-  }
   .githubBtn {
     padding: 10px 10px;
   }

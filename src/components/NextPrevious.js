@@ -19,7 +19,7 @@ const NextPrevious = ({ mdx, allMdx }) => {
         )
       : edges;
 
-    const tree = originalData.reduce(
+    originalData.reduce(
       (
         accu,
         {
@@ -37,7 +37,7 @@ const NextPrevious = ({ mdx, allMdx }) => {
           config.gatsby && config.gatsby.trailingSlash ? parts.slice(1, -2) : parts.slice(1, -1);
 
         for (const part of slicedParts) {
-          let tmp = prevItems && prevItems.find(({ label }) => label == part);
+          let tmp = prevItems && prevItems.find(({ label }) => label === part);
 
           if (tmp) {
             if (!tmp.items) {
@@ -101,11 +101,11 @@ const NextPrevious = ({ mdx, allMdx }) => {
     );
   };
 
-  const data = calculateTreeData(allMdx.edges);
+  calculateTreeData(allMdx.edges);
 
   let currentIndex;
 
-  const currentPaginationInfo = nav.map((el, index) => {
+  nav.forEach((el, index) => {
     if (el && el.url === mdx.fields.slug) {
       currentIndex = index;
     }

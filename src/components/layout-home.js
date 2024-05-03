@@ -2,14 +2,12 @@ import * as React from 'react';
 import { MDXProvider } from '@mdx-js/react';
 import mdxComponents from './mdxComponents';
 import Sidebar from './sidebar';
-import RightSidebar from './rightSidebar';
 import { SidebarContextProvide } from '../context/sidebarContext.jsx';
-import Breadcrumb from './custom/breadcrumb/breadcrumb.jsx';
-import Header from './Header.js';
+import Header from './header/Header.js';
 import HomeBanner from './home-banner.js';
-import Footer from './footer/footer.js';
+import Seo from './seo.js';
 
-const LayoutHome = ({ children, location, edges }) => {
+const LayoutHome = ({ children, location, edges, metaTitle }) => {
   const sidebarRef = React.useRef(null);
 
   React.useEffect(() => {
@@ -19,7 +17,7 @@ const LayoutHome = ({ children, location, edges }) => {
         const computedStyle = window.getComputedStyle(sidebar);
         const leftValue = computedStyle.getPropertyValue('left');
         const position = computedStyle.getPropertyValue('position');
-        if (leftValue == '0px' && position == 'fixed') {
+        if (leftValue === '0px' && position === 'fixed') {
           sidebar.style.left = '-320px';
         }
       }
@@ -34,6 +32,8 @@ const LayoutHome = ({ children, location, edges }) => {
 
   return (
     <SidebarContextProvide edges={edges}>
+      <Seo title={metaTitle} />
+
       <Header location={location} />
       <HomeBanner />
       {/* <div className="landing-container">

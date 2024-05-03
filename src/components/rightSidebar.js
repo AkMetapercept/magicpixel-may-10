@@ -35,11 +35,12 @@ const SidebarLayout = ({ location }) => (
       };
 
       if (allMdx.edges !== undefined && allMdx.edges.length > 0) {
-        const navItems = allMdx.edges.map((item, index) => {
+        allMdx.edges.forEach((item, index) => {
           if (item !== undefined) {
             if (
               item.node.fields.slug === location.pathname ||
-              config.gatsby.pathPrefix + item.node.fields.slug === location.pathname
+              config.gatsby.pathPrefix + item.node.fields.slug === location.pathname ||
+              item.node.fields.slug + config.gatsby.pathPrefix === location.pathname
             ) {
               currentData = item.node.tableOfContents.items;
             }
