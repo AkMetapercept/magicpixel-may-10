@@ -97,7 +97,7 @@ const SearchModal = ({ showModal, setShowModal }) => {
           <div className="modal-body">
             <ul className="list-unstyled result-ul">
               {results.map((result, i) => (
-                <li key={i} className="border p-2 my-1">
+                <li key={i} className="border p-2 my-1" onClick={handleClose}>
                   <Link to={result.url}>
                     <h6 className="mb-0">{result.title}</h6>
                   </Link>
