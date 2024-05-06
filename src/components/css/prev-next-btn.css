@@ -19,14 +19,13 @@
   flex-direction: row;
   align-items: center;
   place-self: stretch;
-  border-radius: 3px;
+  border-radius: 8px;
   border: 1px solid rgb(230, 236, 241);
   transition: border 200ms ease 0s;
-  box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
+  box-shadow: 0px 12px 26px 0px #406ea414;
+  background: linear-gradient(to right, #e6effc, #ffffff);
   text-decoration: none;
-
-  background-color: var(--background);
-  color: var(--text);
+  color: var(--charcoal);
 }
 
 .next-prev-section .nextBtn {
@@ -41,25 +40,24 @@
   flex-direction: row;
   align-items: center;
   place-self: stretch;
-  border-radius: 3px;
+  border-radius: 8px;
   border: 1px solid rgb(230, 236, 241);
   transition: border 200ms ease 0s;
-  box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
+  box-shadow: 0px 12px 26px 0px #406ea414;
+  background: linear-gradient(to right, #ffffff, #e6effc);
   text-decoration: none;
-
-  background-color: var(--background);
-  color: var(--text);
+  color: var(--charcoal);
 }
 
 .next-prev-section .nextBtn:hover,
 .next-prev-section .previousBtn:hover {
   text-decoration: none;
-  border: 1px solid #1ed3c6;
+  border: 1px solid #b5f7e7;
 }
 
 .next-prev-section .nextBtn:hover .rightArrow,
 .next-prev-section .previousBtn:hover .leftArrow {
-  color: #1ed3c6;
+  color: var(--charcoal);
 }
 
 .next-prev-section .leftArrow {

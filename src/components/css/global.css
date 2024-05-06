@@ -11,21 +11,27 @@
 
 :root {
   --white: #fff;
-  --blue: #02268f;
-  --orange: #ef5327;
-  --charcoal: #36454f;
+  /* --blue: #02268f; */
+  /* --violet: #ef5327; */
+  /* --charcoal: #36454f; */
   --tab-bg: #e2e2e2;
   --background: #fff;
   --heading: #000;
-  --text: #3b454e;
+  --charcoal: #3b454e;
   --preFormattedText: rgb(245, 247, 249);
-  --link: #1b0c8a;
+  /* --link: #1b0c8a; */
   /* =================== */
-  --main-blue: #1b008e;
-  --blue: rgb(9, 134, 236);
-  --main-orange: #f44424;
-  --faint-blue: #bbd2ff;
-  --faint-orange: #ee7c6a;
+  /* --blue: #1b008e; */
+  --blue: #5b91e9;
+  --faint-blue: #e6effc;
+  /* --faint-blue: #ccddf8; */
+  --charcoal: #49484f;
+  --violet: #6050e4;
+  --link: #2388ff;
+  --faint-violet: #e7e5fb;
+  /* --violet: #ff2d46; */
+
+  --faint-orange: #fee9e8;
 }
 
 * {
@@ -323,10 +329,15 @@ a:hover {
 }
 
 .hideFrontLine .active > a {
-  background-color: var(--tab-bg);
+  background-color: var(--faint-blue);
+  /* background-color: #e2e2e2; */
   color: var(--blue) !important;
   border-left: 2px solid;
 }
+.hideFrontLine .active > a .circular-container {
+  background-color: white;
+}
+
 .firstLevel ul li .collapser svg path {
   fill: var(--charcoal) !important;
 }

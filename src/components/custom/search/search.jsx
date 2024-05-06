@@ -41,7 +41,7 @@ const Search = () => {
             border-radius: 50%;
             position: absolute;
             right: 0px;
-            color: var(--orange);
+            color: var(--violet);
             background-color: transparent;
             pointer-events: painted;
           }

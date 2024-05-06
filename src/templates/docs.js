@@ -66,9 +66,6 @@ export default class MDXRuntimeTest extends Component {
         <div className="main-body-wrapper">
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </div>
-        <div className={'addPaddTopBottom'}>
-          <NextPrevious mdx={mdx} nav={nav} allMdx={allMdx} {...this.props} />
-        </div>
         <Footer />
       </LayoutHome>
     ) : (

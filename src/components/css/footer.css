@@ -1,27 +1,26 @@
 /* Footer styling */
 footer {
-  background-color: white;
   padding-bottom: 10px;
   text-align: center;
 }
 
 /* Social icon styling */
 footer .social-icons a {
-  display: flex;
+  /* display: flex;
   transition: transform 0.3s ease;
-  background-color: #d0e0ff;
+  background-color: var(--faint-blue);
   text-align: center;
   padding: 15px;
   border-radius: 50%;
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* font-size: 22px; */
   width: 45px;
   height: 45px;
-  align-items: center;
-  justify-content: center;
-  font-size: 22px;
 }
-footer .social-icons a:hover {
-  background-color: rgb(255, 250, 241, 1);
-}
+/* footer .social-icons a:hover {
+  background-color: var(--faint-blue);
+} */
 
 /* Small text styling */
 footer small {
@@ -43,7 +42,7 @@ footer small {
   }
 }
 
-footer .fa-linkedin-in {
+/* footer .fa-linkedin-in {
   color: rgb(9, 134, 236);
 }
 
@@ -57,7 +56,7 @@ footer .fa-youtube {
 
 footer .fa-x-twitter {
   color: black;
-}
+} */
 
 footer hr {
   border: 0;

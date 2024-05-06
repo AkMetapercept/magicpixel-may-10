@@ -21,7 +21,7 @@
   text-transform: uppercase;
   letter-spacing: 1.2px;
   padding: 7px 24px 7px 16px;
-  color: var(--text);
+  color: var(--charcoal);
 }
 
 .right-side-toc .rightSideBarUL {
@@ -40,7 +40,7 @@
   font-weight: 500;
   line-height: 1.5;
   padding: 7px 24px 7px 16px;
-  color: var(--text);
+  color: var(--charcoal);
 }
 
 @media only screen and (max-width: 50rem) {

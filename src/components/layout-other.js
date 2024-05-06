@@ -6,7 +6,6 @@ import RightSidebar from './rightSidebar';
 import { SidebarContextProvide } from '../context/sidebarContext.jsx';
 import Breadcrumb from './custom/breadcrumb/breadcrumb.jsx';
 import Header from './header/Header.js';
-import Search2 from './custom/search/search-2.jsx';
 import Seo from './seo.js';
 
 const LayoutOther = ({ children, location, edges, metaTitle }) => {

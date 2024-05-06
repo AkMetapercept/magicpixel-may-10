@@ -1,11 +1,10 @@
 import * as React from 'react';
 import Link from '../link.js';
 import Sidebar from '../sidebar/index.js';
-import Search from '../custom/search/search.jsx';
 
 // ----------logo-----------------
 import logoImg from '../images/magicPixel.png';
-import ThemeToggle from './theme-toggle.js';
+// import ThemeToggle from './theme-toggle.js';
 import SearchModal from './search-modal.js';
 
 const toggleSidebar = () => {
@@ -30,10 +29,13 @@ const Header = ({ location }) => {
             <div className={'navBarHeader'}>
               <i className="fa-solid fa-bars  d-block d-xl-none" onClick={toggleSidebar}></i>
               <Link to={'/'} className={'navBarBrand'}>
-                <img className={'img-responsive displayInline'} src={logoImg} alt={'magic pixel'} />
+                <img
+                  className={'img-responsive displayInline'}
+                  src="/company-logo.png"
+                  alt={'magic pixel'}
+                />
               </Link>
             </div>
-            {/* <Search /> */}
             <div className="d-flex gap-5 align-items-center">
               <div className="top-search-box d-none d-sm-flex">
                 <form className="search-form" onClick={() => setShowModal(true)}>
@@ -50,9 +52,33 @@ const Header = ({ location }) => {
                   </button>
                 </form>
               </div>
+              <div className="top-search-box-mobile d-flex d-sm-none">
+                <form className="search-form" onClick={() => setShowModal(true)}>
+                  <input
+                    type="text"
+                    name="search"
+                    className="form-control search-input"
+                    autoComplete="off"
+                    readOnly
+                  />
+                  <button
+                    type="submit"
+                    className="btn search-btn"
+                    value="Search"
+                    aria-label="Search"
+                  >
+                    <i className="fas fa-search" />
+                  </button>
+                </form>
+              </div>
 
               <div className="social-icons d-none d-lg-flex gap-3 justify-content-center">
-                <a href="https://twitter.com/1MagicPixel" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://twitter.com/1MagicPixel"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="twitter"
+                >
                   <i className="fa-brands fa-x-twitter"></i>
                 </a>
 
@@ -60,6 +86,7 @@ const Header = ({ location }) => {
                   href="https://www.facebook.com/1magicpixel"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="facebook"
                 >
                   <i className="fa-brands fa-facebook-f"></i>
                 </a>
@@ -68,6 +95,7 @@ const Header = ({ location }) => {
                   href="https://www.linkedin.com/company/magicpixel/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="linkedin"
                 >
                   <i className="fa-brands fa-linkedin-in"></i>
                 </a>
@@ -76,11 +104,12 @@ const Header = ({ location }) => {
                   href="https://www.youtube.com/channel/UCA08lnOE0hrLgT8PP0zB0_w"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="youtube"
                 >
                   <i className="fa-brands fa-youtube"></i>
                 </a>
               </div>
-              <ThemeToggle />
+              {/* <ThemeToggle /> */}
             </div>
           </div>
         </nav>

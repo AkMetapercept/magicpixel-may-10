@@ -25,7 +25,7 @@ header .navBarBrand img {
 }
 
 /* #F44424 */
-header .social-icons a {
+.social-icons a {
   width: 35px;
   height: 35px;
   background-color: var(--faint-blue);
@@ -38,8 +38,9 @@ header .social-icons a {
   transition: all 0.3s ease;
 }
 
-header .social-icons a:hover {
-  color: var(--main-orange);
+.social-icons a:hover {
+  color: var(--violet);
+  background-color: var(--faint-violet);
 }
 
 /* =================== theme toggle ===================== */
@@ -157,7 +158,9 @@ header .input:checked + .slider:before {
 header .top-search-box {
   width: 200px;
 }
-.form-control:hover {
+
+.form-control:hover,
+.form-control:focus {
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
   outline: none;
 }
@@ -186,6 +189,13 @@ header .search-form .search-btn {
   right: 0;
   top: 0.15rem;
   margin-right: 0;
+}
+
+header .top-search-box-mobile {
+  width: 40px;
+}
+header .top-search-box-mobile .search-form .search-input {
+  padding: 0;
 }
 /* ======================search input ======================= */
 /* ======================search modal========================= */
@@ -222,7 +232,7 @@ header .result-ul a {
   color: var(--charcoal);
 }
 header .result-ul li:hover a {
-  color: var(--main-blue);
+  color: var(--blue);
 }
 header .result-ul li:hover {
   background-color: var(--faint-blue);

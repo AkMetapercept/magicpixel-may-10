@@ -4,7 +4,7 @@ const HomeBanner = () => {
   return (
     <div className="landing-container">
       <div className="container">
-        <h1 style={{ color: 'white' }}>Magic Pixel</h1>
+        <h1 style={{ color: 'white' }}>Ingest Labs</h1>
         <h4 style={{ color: 'white' }}>
           Everything you need to get software documentation online.
         </h4>

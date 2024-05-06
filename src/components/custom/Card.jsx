@@ -3,19 +3,19 @@ import React from 'react';
 import { useSidebarContext } from '../../context/sidebarContext';
 
 const imageData = {
-  aboutmagicpixel: '/landing-page/icons/introduction.png',
-  navigatingthroughui: '/landing-page/icons/navigation-ui.png',
-  dashboard: '/landing-page/icons/dashboard.png',
-  reports: '/landing-page/icons/report.png',
-  addanewproject: '/landing-page/icons/new-project.png',
-  tags: '/landing-page/icons/tags.png',
-  dataelements: '/landing-page/icons/data-element.png',
-  providers: '/landing-page/icons/provider.png',
-  triggers: '/landing-page/icons/trigger.png',
-  qualificationcriteria: '/landing-page/icons/qualification.png',
-  transformers: '/landing-page/icons/transformers.png',
-  publish: '/landing-page/icons/publish.png',
-  livedebugging: '/landing-page/icons/debugging.png',
+  aboutmagicpixel: '/landing-page/icons/blue/introduction.png',
+  navigatingthroughui: '/landing-page/icons/blue/navigation-ui.png',
+  dashboard: '/landing-page/icons/blue/dashboard.png',
+  reports: '/landing-page/icons/blue/report.png',
+  addanewproject: '/landing-page/icons/blue/new-project.png',
+  tags: '/landing-page/icons/blue/tags.png',
+  dataelements: '/landing-page/icons/blue/data-element.png',
+  providers: '/landing-page/icons/blue/provider.png',
+  triggers: '/landing-page/icons/blue/trigger.png',
+  qualificationcriteria: '/landing-page/icons/blue/qualification.png',
+  transformers: '/landing-page/icons/blue/transformers.png',
+  publish: '/landing-page/icons/blue/publish.png',
+  livedebugging: '/landing-page/icons/blue/debugging.png',
 };
 
 const MdxCard = ({ data }) => {
@@ -26,7 +26,13 @@ const MdxCard = ({ data }) => {
         <div className="card-body">
           <div className="d-flex gap-4 align-items-center">
             <div className="imgWrapper">
-              <img className="imgicon" alt={data.label} src={imageData[data.label]} />
+              <img
+                className="imgicon"
+                alt={data.label}
+                src={imageData[data.label]}
+                width={30}
+                height={30}
+              />
             </div>
             <h4 className="card-title"> {data.title}</h4>
           </div>
