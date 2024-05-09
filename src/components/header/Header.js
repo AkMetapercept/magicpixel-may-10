@@ -118,7 +118,6 @@ const Header = ({ location }) => {
         <div id="navbar" className={'topnav'}>
           <div className={'visibleMobile'}>
             <Sidebar location={location} />
-            <hr />
           </div>
         </div>
 

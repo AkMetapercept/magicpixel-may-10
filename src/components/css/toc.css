@@ -4,7 +4,7 @@
   height: calc(100vh - 80px);
   overflow: auto;
   position: fixed;
-  padding-left: 24px;
+  padding-left: 10px;
   position: -webkit-sticky;
   position: -moz-sticky;
   position: sticky;
@@ -20,7 +20,7 @@
   margin-top: 20px;
   text-transform: uppercase;
   letter-spacing: 1.2px;
-  padding: 7px 24px 7px 16px;
+  padding: 7px 24px 7px 10px;
   color: var(--charcoal);
 }
 
@@ -28,7 +28,13 @@
   margin-top: 20px;
   padding-left: 0px;
 }
+.right-side-toc .rightSideBarUL ul {
+  padding-left: 16px;
+}
 
+.right-side-toc .rightSideBarUL > ul > li {
+  border-left: none;
+}
 .right-side-toc .rightSideBarUL li {
   list-style-type: none;
   border-left: 1px solid #e6ecf1;

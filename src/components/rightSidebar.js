@@ -12,7 +12,7 @@ const SidebarLayout = ({ location }) => (
               fields {
                 slug
               }
-              tableOfContents
+              tableOfContents(maxDepth: 3)
             }
           }
         }
