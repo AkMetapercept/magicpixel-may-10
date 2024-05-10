@@ -1,0 +1,33 @@
+---
+title: 'Data Governance Screen'
+metaTitle: 'Data Governance Screen | Magic Pixel'
+order: 1
+---
+
+# Data Governance Screen
+
+To navigate to the Data Governance screen, select **Data Governance** from the left navigation panel.
+
+The Data Governance screen lists all the providers that are configured in a particular project.
+
+![datagovernance](/images/datagovernanceimages/datagovernancescreen.png)
+
+Each of these providers display the status as **Allowed** or **Blocked** on the right corner. 
+
+By default, all the providers are marked with Allowed status whenever a new project is created.
+
+Magic Pixel blocks or allows the triggering of tags based on the following conditions:
+- User consent received
+- Provider settings
+
+The following table lists the two scenarios while triggering the tags.
+
+| Status      | pr_comp | provider_block_list | Trigger Tags |
+| ----------- | ----------- | ----------------|-------------|
+| User has provided consent for data tracking   | True   | Allowed | Yes |
+| User has provided consent for data tracking   | True   | Blocked | Yes |
+| User has not provided consent for data tracking | False | Allowed | Yes |
+| User has not provided consent for data tracking | False | Blocked | No |
+
+- The Providers in the **Allowed** state are allowed no matter is the value of pr_comp.
+- The Providers in the **Blocked** state are allowed only when the pr_comp = True.

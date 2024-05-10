@@ -22,7 +22,7 @@
   border-radius: 8px;
   border: 1px solid rgb(230, 236, 241);
   transition: border 200ms ease 0s;
-  box-shadow: 0px 12px 26px 0px #406ea414;
+  box-shadow: 0px 5px 10px 2px #5489c54a;
   background: linear-gradient(to right, #e6effc, #ffffff);
   text-decoration: none;
   color: var(--charcoal);
@@ -43,7 +43,7 @@
   border-radius: 8px;
   border: 1px solid rgb(230, 236, 241);
   transition: border 200ms ease 0s;
-  box-shadow: 0px 12px 26px 0px #406ea414;
+  box-shadow: 0px 5px 10px 2px #5489c54a;
   background: linear-gradient(to right, #ffffff, #e6effc);
   text-decoration: none;
   color: var(--charcoal);
@@ -52,18 +52,18 @@
 .next-prev-section .nextBtn:hover,
 .next-prev-section .previousBtn:hover {
   text-decoration: none;
-  border: 1px solid #b5f7e7;
+  box-shadow: 0px 2px 5px 2px #5489c527;
 }
 
 .next-prev-section .nextBtn:hover .rightArrow,
 .next-prev-section .previousBtn:hover .leftArrow {
-  color: var(--charcoal);
+  color: var(--violet);
 }
 
 .next-prev-section .leftArrow {
   display: flex;
   margin: 0px;
-  color: rgb(157, 170, 182);
+  color: var(--gray);
   flex: 0 0 auto;
   font-size: 24px;
   transition: color 200ms ease 0s;
@@ -79,7 +79,7 @@
   padding: 16px;
   padding-left: 16px;
   margin: 0px;
-  color: rgb(157, 170, 182);
+  color: var(--gray);
 }
 
 .next-prev-section .nextPreviousTitle {
@@ -93,6 +93,7 @@
   font-size: 16px;
   line-height: 1.5;
   font-weight: 500;
+  color: var(--violet);
 }
 
 @media (max-width: 767px) {

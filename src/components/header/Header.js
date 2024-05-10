@@ -24,8 +24,8 @@ const Header = ({ location }) => {
   return (
     <>
       <header>
-        <nav className="container-fluid">
-          <div className="d-flex justify-content-between align-items-center">
+        <nav className="container-fluid h-100">
+          <div className="d-flex justify-content-between align-items-center h-100">
             <div className={'navBarHeader'}>
               <i className="fa-solid fa-bars  d-block d-xl-none" onClick={toggleSidebar}></i>
               <Link to={'/'} className={'navBarBrand'}>

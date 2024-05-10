@@ -1,66 +1,32 @@
-/* Footer styling */
 footer {
   padding-bottom: 10px;
   text-align: center;
 }
 
-/* Social icon styling */
 footer .social-icons a {
-  /* display: flex;
-  transition: transform 0.3s ease;
-  background-color: var(--faint-blue);
-  text-align: center;
-  padding: 15px;
-  border-radius: 50%;
-  /* align-items: center; */
-  /* justify-content: center; */
-  /* font-size: 22px; */
   width: 45px;
   height: 45px;
 }
-/* footer .social-icons a:hover {
-  background-color: var(--faint-blue);
-} */
 
-/* Small text styling */
 footer small {
   display: block;
-  color: black;
+  color: var(--charcoal);
   font-size: 14px;
 }
+footer small a {
+  color: var(--violet);
+  font-weight: 500;
+}
 
-/* Responsive styling */
 @media screen and (max-width: 768px) {
-  /* Adjust margin for social icons on smaller screens */
-  footer .social-icons {
-    margin-bottom: 10px;
-  }
-
-  /* Reduce font size for small text on smaller screens */
   footer small {
     font-size: 12px;
   }
 }
 
-/* footer .fa-linkedin-in {
-  color: rgb(9, 134, 236);
-}
-
-footer .fa-facebook-f {
-  color: rgb(9, 134, 236);
-}
-
-footer .fa-youtube {
-  color: red;
-}
-
-footer .fa-x-twitter {
-  color: black;
-} */
-
 footer hr {
-  border: 0;
   height: 2px;
-  background-color: black;
+  background-color: var(--charcoal);
+  color: var(--charcoal);
   margin: 20px 0;
 }

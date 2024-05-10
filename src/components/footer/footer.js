@@ -30,7 +30,7 @@ const Footer = () => {
             <i className="fa-brands fa-youtube"></i>
           </a>
         </div> */}
-        <div className="social-icons d-none d-lg-flex gap-3 justify-content-center">
+        <div className="social-icons d-flex gap-3 justify-content-center">
           <a
             href="https://twitter.com/1MagicPixel"
             target="_blank"

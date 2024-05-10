@@ -33,13 +33,13 @@ You can select either the User-defined Triggers or Default triggers using this o
 
 5. Set **Qualification Criteria**.
 
-The Qualification Criteria of a tag are the conditions/triggers when the Magic Pixel triggers a particular tag. 
-In this step, you can add the Qualification Criteria for the tag in the Qualification Criteria required screen. You can add multiple Qualification Criteria and these criteria are layered.
+The Qualification Criteria are the conditions/triggers that inform Magic Pixel when to trigger a particular tag. 
+In this step, you can add the Qualification Criteria for the tag in the **Qualification Criteria required** screen. You can add multiple Qualification Criteria and these criteria are layered.
 
 ![addanewtagbrowser](/images/tagsimages/addqualificationcriteria.png)
 
 6. Click **Add Qualification Criteria**.
-7. Select **Data Elements** tab for the data elements to be set for the Qualification criteria.
+7. Select the **Data Elements** tab for the data elements to be set for the Qualification criteria.
 
 ![addanewtagbrowser](/images/tagsimages/choosedataelements.png)
 
@@ -56,6 +56,8 @@ This is the step where you can set a name and validity period for the tag. The d
 While creating a tag on Magic Pixel, you can set the validity period of a particular tag and define its expiry. The default validity period is one year for any new tag that is created and can be set to any desired date. When the expiry date is closer, you will receive reminder e-mail notification about the expiry of the tag. If no action is taken, the tag stops triggering post the set validity period. You can find all expired tags in the “Paused State” in the Publish section and can remove the same to reduce the size of your SDK.
 
 10. Set **Tag Query Parameters**.
+
+The Query parameters are a set of dynamic values included along with the Base URL while executing the query. These parameters appear in the Attributes section along with the values.
 
 ![addanewtagbrowser](/images/tagsimages/taginfo.png)
  
@@ -80,7 +82,7 @@ To add Attributes, select the **Add Attributes** and set the following values.
 
 **Name**: Set the Attribute name. For example: visitor_id, user_id, and so on.
 **Value**: Set the value either for the Data Element or Transformer.
-**JSON**: Enter the Attribute name, value, and configure the Settings.
+**JSON**: Enter the Attribute name and value, and configure the Settings.
 - Mandatory - Denotes the value to be mandatory.
 -	Ignore If Empty - Ignore the field if empty.
 -	Hash (SHA256) - denotes the value in the HASH format.
@@ -106,7 +108,7 @@ Enter the **Attribute Settings**.
 | Convert to Array | Converts the input data to Array. |
 | Convert to Object Spread | Converts the JSON attributes under a parent level attribute to the root level attributes. |
 
-14. Select one the following Transformer types and click **Confirm**.
+14. Select one of the following Transformer types and click **Confirm**.
 
 | Transformer Type      | Description |
 | ----------- | ----------- |
@@ -119,7 +121,7 @@ To delete the Provider Attribute, select the **Delete** icon at the right-hand c
 
 15. Denote the **Script**.
 
-The Script denotes the code script if available for the tag. Select the check box No Script if the script is unavailable.
+The Script denotes the code script if available for the tag. Select the **No Script** check box if the script is unavailable.
 
 ![addanewtagbrowser](/images/tagsimages/script.png)
 

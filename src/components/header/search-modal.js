@@ -88,7 +88,7 @@ const SearchModal = ({ showModal, setShowModal }) => {
                 onChange={handleInputChange}
               />
               <button className="closeicon" onClick={clearSearchText}>
-                <i className="fa-solid fa-xmark" style={{ color: '#1B0C8A' }}></i>
+                <i className="fa-solid fa-xmark"></i>
               </button>
             </div>
           </div>
@@ -97,7 +97,7 @@ const SearchModal = ({ showModal, setShowModal }) => {
               {results.map((result, i) => (
                 <li key={i} className="border p-2 my-1" onClick={handleClose}>
                   <Link to={result.url}>
-                    <h6 className="mb-0">{result.title}</h6>
+                    <h6 className="mb-0 search-result">{result.title}</h6>
                   </Link>
                 </li>
               ))}

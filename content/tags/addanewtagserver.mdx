@@ -6,7 +6,7 @@ order: 4
 
 # Add a New Tag (For Server-side)
 
-To add a new Tag for server-side, perform the following steps:
+To add a new server-side tag, perform the following steps:
 1.	Select **Tags** from the left navigation panel.
 2.	Click **Add Tag -> For Server** on the top-right corner of the screen.
 
@@ -27,27 +27,26 @@ You can select either the User-defined Triggers or Default triggers using this o
 
 ![addanewtagserver](/images/tagsimages/choosetriggers.png)
 
-
 5. Set **Qualification Criteria**.
 
-Qualification Criteria of a tag are conditions/triggers that informs Magic Pixel when to trigger a particular tag. 
-In this step, you can add the Qualification Criteria for the tag in the Qualification Criteria required screen. You can add multiple Qualification Criteria and they will be layered.
+Qualification Criteria of a tag are conditions/triggers that inform Magic Pixel when to trigger a particular tag. 
+In this step, you can add the Qualification Criteria for the tag in the **Qualification Criteria required** screen. You can add multiple Qualification Criteria and they will be layered.
 
 ![addanewtagserver](/images/tagsimages/addnewtagserverqualificationcriteria.png)
 
-
 a. Click **Add Qualification Criteria**.
 
-b. Select **Data Elements** tab for the data elements to be set for the Qualification criteria.
+b. Select the **Data Elements** tab for the data elements to be set for the Qualification criteria.
 
 ![addanewtagserver](/images/tagsimages/choosedataelements.png)
 
 6. Set **Tag Info**.
 
 This is the step where you set a name and validity period for the tag. The default validity period is 1 year for any new tag that is created and can be set to any desired date. (To understand tag validity or expiry, see the section “Set the Validity period and Tag Expiry”:
-**Name:** The Tag name.
-**Validity Period:** Denotes the Validity period of the tag including Start Date and End Date.
 
+**Name:** The Tag name.
+
+**Validity Period:** Denotes the validity period of the tag including Start Date and End Date.
 
 ![addanewtagserver](/images/tagsimages/taginfovalidityperiod.png)
 
@@ -75,7 +74,7 @@ a. To add Attributes, select the **Add Attributes** and set the following values
 
 **Name**: Set the Attribute name. For example: visitor_id, user_id, and so on.
 **Value**: Set the value either for the Data Element or Transformer.
-**JSON**: Enter the Attribute name, value, and configure the Settings.
+**JSON**: Enter the Attribute name and value, and configure the Settings.
 - Mandatory - Denotes the value to be mandatory.
 - Ignore If Empty - Ignore the field if empty.
 - Hash (SHA256) - denotes the value in the HASH format.
@@ -105,7 +104,7 @@ d. Select one the following Transformer types and click **Confirm**.
 
 | Transformer Type      | Description |
 | ----------- | ----------- |
-| URL encode     | Converts the URL in the encrypted format.  |
+| URL encode     | Converts the URL into the encrypted format.  |
 | HASH (SHA256)   | The value is converted to HASH (SHA256) format. |
 | Ignore if empty | May be ignored if the value is empty. |
 
@@ -120,7 +119,7 @@ To add Tag Attributes, click **Add Attribute**.
 
 **Name**: Set the Attribute name. For example: visitor_id, user_id, and so on.
 **Value**: Set the value either for the Data Element or Transformer.
-**JSON**: Enter the Attribute name, value, and configure the Settings.
+**JSON**: Enter the Attribute name and value, and configure the Settings.
 - Mandatory - Denotes the value to be mandatory.
 - Ignore If Empty - Ignore the field if empty.
 - Hash (SHA256) - denotes the value in the HASH format.
@@ -136,7 +135,6 @@ a. Enter the **Attribute Settings**.
 
 ![addanewtagserver](/images/tagsimages/serverattributesettings.png)
 
-
 b. Set the Data Type Conversion using the following options.
 
 | Data Type Conversion      | Description |
@@ -147,11 +145,11 @@ b. Set the Data Type Conversion using the following options.
 | Convert to Array | Converts the input data to Array. |
 | Convert to Object Spread | Converts the JSON attributes under a parent level attribute to the root level attributes.|
 
-c. Select one the following Transformer types and click **Confirm**.
+c. Select one of the following Transformer types and click **Confirm**.
 
 | Transformer Type      | Description |
 | ----------- | ----------- |
-| URL encode     |  Converts the URL in the encrypted format.    |
+| URL encode     |  Converts the URL into the encrypted format.    |
 | HASH (SHA256)   | The value is converted to HASH (SHA256) format. |
 | Ignore if empty | May be ignored if the value is empty. |
 

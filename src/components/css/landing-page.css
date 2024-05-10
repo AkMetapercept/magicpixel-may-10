@@ -2,13 +2,31 @@
   position: relative;
   width: 100%;
   height: 300px;
-  background-image: url('/landing-page/banner2.png');
-  background-size: cover;
-  background-position: bottom right;
+  background-image: url('/landing-page/banner.svg');
+  background-size: auto;
+
+  background-position: center center;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  color: var(--white);
+  text-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.landing-container .name {
+  font-size: 60px;
+  margin-bottom: 20px;
+  text-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+@media (max-width: 576px) {
+  .landing-container .name {
+    font-size: 40px;
+  }
 }
 
 /* ==============================================Card Design========================================= */
@@ -28,6 +46,8 @@
 }
 
 .imgWrapper {
+  width: 60px;
+  height: 60px;
   background-color: var(--faint-blue);
   text-align: center;
   padding: 12px;
@@ -38,8 +58,8 @@
   overflow: hidden;
 }
 
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
   .landing-container {
     background-position: top left;
   }
-}
+} */

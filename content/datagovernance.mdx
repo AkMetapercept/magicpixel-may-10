@@ -1,0 +1,13 @@
+---
+title: 'Data Governance'
+metaTitle: 'Data Governance | Magic Pixel'
+order: 14
+---
+
+# Data Governance
+
+Data Governance are the set of legal regulations that companies must follow while triggering the tags on Magic Pixel. Data Governance acts as a controller or approver for these guidelines. Some of these regulations include government policies such as CCPA, GDPR, and so on. That is, when a person visits a website and the website identifies that the person is from a particular state, and the state has a privacy law enacted, then the website presents a consent banner. The consent banner is mainly to inform that the information is being tracked after receiving the consent from the user for further data tracking purposes. 
+
+The banner providers are called as Consent Managers who mainly provide the consent banners such as One Trust. Magic Pixel uses this consent received from the banner to trigger or not to trigger the media tags. The Privacy Compliance Data element **pr_comp** returns either **True** or **False** when the Magic Pixel executes the Java Script provided in the Custom Javascript section. Using Magic Pixel, you can integrate with any Consent Manager available, as long as you can read the consents from the website browser using Java Script.
+
+**Note:** If the user has accepted the data tracking, then by default the Data element **pr_comp** returns **True**.

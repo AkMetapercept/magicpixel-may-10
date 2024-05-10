@@ -24,22 +24,26 @@
 }
 
 /* width */
-.left-sidebar::-webkit-scrollbar {
+.left-sidebar::-webkit-scrollbar,
+.modal-body::-webkit-scrollbar {
   width: 5px;
 }
 
 /* Track */
-.left-sidebar::-webkit-scrollbar-track {
+.left-sidebar::-webkit-scrollbar-track,
+.modal-body::-webkit-scrollbar-track {
   background: var(--faint-violet);
 }
 
 /* Handle */
-.left-sidebar::-webkit-scrollbar-thumb {
+.left-sidebar::-webkit-scrollbar-thumb,
+.modal-body::-webkit-scrollbar-thumb {
   background: #cdc9f7;
 }
 
 /* Handle on hover */
-.left-sidebar::-webkit-scrollbar-thumb:hover {
+.left-sidebar::-webkit-scrollbar-thumb:hover,
+.modal-body::-webkit-scrollbar-thumb:hover {
   background: var(--violet);
 }
 

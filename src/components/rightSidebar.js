@@ -23,13 +23,18 @@ const SidebarLayout = ({ location }) => (
       const generateListItems = (items) => {
         return (
           <ul>
-            {items?.map((item, index) => (
-              <li key={index}>
-                <a href={`#${item.title.replace(/ /g, '').toLowerCase()}`}>{item.title}</a>
-                {item.items && generateListItems(item.items)}{' '}
-                {/* Recursively call if there are sub-items */}
-              </li>
-            ))}
+            {items?.map((item, index) => {
+              const url = `#${item.title.replace(/ /g, '').toLowerCase()}`;
+              return (
+                <li key={index}>
+                  <a href={url} className={`${url === location?.hash ? 'active' : ''} `}>
+                    {item.title}
+                  </a>
+                  {item.items && generateListItems(item.items)}{' '}
+                  {/* Recursively call if there are sub-items */}
+                </li>
+              );
+            })}
           </ul>
         );
       };

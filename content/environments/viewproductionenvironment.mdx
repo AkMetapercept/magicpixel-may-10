@@ -1,0 +1,46 @@
+---
+title: 'View Production Environment'
+metaTitle: 'View Production Environment | Magic Pixel'
+order: 2
+---
+
+# View Production Environment
+
+To view the Staging Environment, select the **Production** option under Environments screen.
+
+## Info
+
+The **Info** section includes the following information.
+
+- Name 
+- Description 
+
+## SDK Settings
+
+The SDK Settings section includes the following information:
+
+| Field Name   | Description | 
+| ----------- | ----------- | 
+| Event Trigger | Includes the browser event which triggers the Tag manager. Select the relevant option from the drop-down menus: <br /> •	Event Type: Denotes the event type. <br /> • Event Trigger: Denotes the event trigger. <br /> •	Default Cookie Domain: The Cookie domain will automatically be detected at runtime. Includes the option either Auto or Manual. |
+|Secondary Trigger (JavaScript Variable) | Select this check box if a secondary trigger is to be defined. |
+| Enable error logging | Select the check boxes to enable the following errors for debugging purposes: <br /> •	Report Client-side SDK errors <br /> •	Enable Logging for client-side SDK |
+| Trigger Delay | Denotes the delay in triggering of the tag in milliseconds.|
+| Content Security Policy | Select this check box to enable or disable this option. If Enabled, the following option is available. |
+| Meta tag attribute name for Nonce | The Attribute name in meta tag where the Nonce value is configured in the website. |
+
+## SDK Setup
+
+To set up Magic Pixel SDK, you must include the following script tag in index.html file of the website. Once the script is executed, the SDK is installed on the client website.
+
+The following is the SDK URL that you must embed in the Staging environment of the client website.
+
+![viewproductionenvironment](/images/environmentsimages/productioncode.png)
+
+## Approved Domains & Collector URLs
+
+The Approved Domains & Collector URLs include the following information:
+
+| Option   | Description | 
+| ----------- | ----------- | 
+| Data Collector Configuration | No domains have been added. Traffic will be accepted from all domains. Reach out to Support team to add domain level configuration. |
+| Approved Data Collection Domains | No domains are listed. Traffic will be accepted from all domains. Reach out to support team to add domain level configuration. |

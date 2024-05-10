@@ -8,6 +8,7 @@
 @import url(./prev-next-btn.css);
 @import url(./main-body-wrapper.css);
 @import url(./footer.css);
+@import url(./404.css);
 
 :root {
   --white: #fff;
@@ -17,6 +18,7 @@
   --charcoal: #49484f;
   --violet: #6050e4;
   --faint-violet: #e7e5fb;
+  --gray: #ababab;
 }
 
 * {
@@ -114,7 +116,7 @@ a {
 }
 
 ::placeholder {
-  color: #c2c2c2;
+  color: var(--gray);
 }
 
 pre {
@@ -189,15 +191,19 @@ a:hover {
   border-left: 2px solid;
 }
 .hideFrontLine .active > a .circular-container {
-  background-color: white;
+  background-color: var(--white);
 }
 
-.firstLevel ul li .collapser svg path {
-  fill: var(--charcoal) !important;
+/* .firstLevel ul li .collapser svg path { */
+.hideFrontLine a svg path {
+  fill: var(--charcoal);
 }
-.firstLevel ul li.active > a > .collapser > svg > path {
+.hideFrontLine .active > a svg path {
+  fill: var(--blue);
+}
+/* .firstLevel ul li.active > a > .collapser > svg > path {
   fill: #001933 !important;
-}
+} */
 
 .firstLevel ul .item ul .item {
   border-left: 1px solid var(--blue);
@@ -243,11 +249,11 @@ a:hover {
   display: block;
   margin: 0px;
   padding: 0px;
-  color: #6e6e6e;
+  color: var(--gray);
 }
 
 .smallContent span {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.625;
   font-weight: 400;
 }
@@ -264,19 +270,17 @@ a:hover {
 /* tables.css */
 table {
   padding: 0;
+  margin: 10px 0;
 }
 
 table tr {
-  border-top: 1px solid #cccccc;
+  border-top: 1px solid var(--gray);
   margin: 0;
   padding: 0;
 }
 
-/* table tr:nth-child(2n) {
-  background-color: #f8f8f8;
-} */
 table th {
-  background-color: #f8f8f8;
+  background-color: #e1e0e0;
 }
 
 table tr th {
@@ -308,6 +312,7 @@ table tr td :last-child {
 /* Image styling */
 img {
   max-width: 100%;
+  margin: 10px 0;
 }
 /* end image */
 
@@ -318,13 +323,15 @@ img {
 .heading5,
 .heading6 {
   line-height: 1.5;
-  margin-bottom: 16px;
-  margin-top: 32px;
+  /* margin-bottom: 10px;
+  margin-top: 15px; */
+  margin: 10px 0;
 }
 
 .paragraph {
-  margin: 10px 0px 16px;
-  line-height: 1.625;
+  padding: 0px 0px 10px;
+  margin-bottom: 0;
+  line-height: 1.5;
 }
 
 .pre {
@@ -344,4 +351,8 @@ main table tr {
 
 .scroll-margin-top {
   scroll-margin-top: 85px;
+}
+
+.breadcrumb a {
+  color: var(--violet);
 }

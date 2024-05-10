@@ -4,7 +4,7 @@ import mdxComponents from './mdxComponents';
 import Sidebar from './sidebar';
 import RightSidebar from './rightSidebar';
 import { SidebarContextProvide } from '../context/sidebarContext.jsx';
-import Breadcrumb from './custom/breadcrumb/breadcrumb.jsx';
+import Breadcrumb from './custom/breadcrumb.jsx';
 import Header from './header/Header.js';
 import HomeBanner from './home-banner.js';
 import Footer from './footer/footer.js';

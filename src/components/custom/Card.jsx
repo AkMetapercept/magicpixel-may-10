@@ -16,6 +16,9 @@ const imageData = {
   transformers: '/landing-page/icons/blue/transformers.png',
   publish: '/landing-page/icons/blue/publish.png',
   livedebugging: '/landing-page/icons/blue/debugging.png',
+  datagovernance: '/landing-page/icons/blue/governance.png',
+  settings: '/landing-page/icons/blue/settings.png',
+  environments: '/landing-page/icons/blue/states.png',
 };
 
 const MdxCard = ({ data }) => {

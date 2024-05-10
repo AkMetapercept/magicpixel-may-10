@@ -19,6 +19,9 @@ const imageData = {
   Transformers: '/landing-page/icons/blue/transformers.png',
   Publish: '/landing-page/icons/blue/publish.png',
   'Live Debugging': '/landing-page/icons/blue/debugging.png',
+  'Data Governance': '/landing-page/icons/blue/governance.png',
+  Settings: '/landing-page/icons/blue/settings.png',
+  Environments: '/landing-page/icons/blue/states.png',
 };
 const getImageForTitle = (title) => {
   // Check if the title exists in imageData

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useSidebarContext } from '../../../context/sidebarContext';
+import { useSidebarContext } from '../../context/sidebarContext';
 import { Link } from 'gatsby';
 
 const Breadcrumb = ({ location }) => {
@@ -17,7 +17,7 @@ const Breadcrumb = ({ location }) => {
       return (
         <React.Fragment key={url}>
           {index !== data.length - 1 ? <Link to={url}>{label}</Link> : <span>{obj.title}</span>}
-          {index < data.length - 1 && ' / '}
+          {index < data.length - 1 && <span className="px-1"> / </span>}
         </React.Fragment>
       );
     });
@@ -57,7 +57,7 @@ const Breadcrumb = ({ location }) => {
     }
   }, [location.pathname, urlObject]);
 
-  return <div className="mt-3">{breadcrumbs}</div>;
+  return <div className="mt-4 breadcrumb">{breadcrumbs}</div>;
 };
 
 export default Breadcrumb;

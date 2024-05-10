@@ -2,7 +2,6 @@ header {
   background-color: var(--white);
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
   z-index: 999;
-  padding: 15px;
   position: sticky;
   top: 0;
   left: 0;
@@ -24,23 +23,23 @@ header .navBarBrand img {
   display: inline-block;
 }
 
-/* #F44424 */
 .social-icons a {
   width: 35px;
   height: 35px;
-  background-color: var(--faint-blue);
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--blue);
+  color: var(--violet);
+  background-color: var(--faint-violet);
+
   font-size: 20px;
   transition: all 0.3s ease;
 }
 
 .social-icons a:hover {
-  color: var(--violet);
-  background-color: var(--faint-violet);
+  color: var(--blue);
+  background-color: var(--faint-blue);
 }
 
 /* =================== theme toggle ===================== */
@@ -174,15 +173,16 @@ header .search-form .search-input {
   padding-right: 3rem;
   padding-left: 1.5rem;
   height: 40px;
-  border-color: var(--faint-blue);
+  border-color: var(--violet);
 }
 
+header .search-form .search-input:focus,
 header .search-form .search-input:hover {
   border-color: #e7e9ed;
   cursor: pointer;
 }
 header .search-form .search-btn {
-  color: #828d9f;
+  color: var(--violet);
   background: none;
   border: none;
   position: absolute;
@@ -215,7 +215,7 @@ header .modal-dialog {
 .modal-header input {
   padding-left: 15px;
   padding-right: 15px;
-  border: 0.5px solid gray;
+  border: 0.5px solid var(--violet);
   outline: none;
   border-radius: 8px !important;
 }
@@ -225,13 +225,16 @@ header .modal-dialog {
   top: 50%;
   right: 15px;
   border: none;
-  background-color: white;
+  background-color: var(--white);
+  color: var(--violet);
   transform: translateY(-50%);
 }
-header .result-ul a {
+header .result-ul .search-result {
   color: var(--charcoal);
+  font-weight: 500;
+  font-size: 16px;
 }
-header .result-ul li:hover a {
+header .result-ul li:hover .search-result {
   color: var(--blue);
 }
 header .result-ul li:hover {

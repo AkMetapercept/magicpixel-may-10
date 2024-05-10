@@ -4,11 +4,8 @@
 
 .main-body-wrapper ul,
 .main-body-wrapper ol {
-  -webkit-padding-start: 40px;
-  -moz-padding-start: 40px;
-  -o-padding-start: 40px;
-  margin: 24px 0px;
-  padding: 0px 0px 0px 2em;
+  margin: 0px 0px 0px;
+  padding: 0px 0px 0px 20px;
 }
 .main-body-wrapper ul li,
 .main-body-wrapper ol li {

@@ -37,16 +37,20 @@
 }
 .right-side-toc .rightSideBarUL li {
   list-style-type: none;
-  border-left: 1px solid #e6ecf1;
-  border-left-color: rgb(230, 236, 241);
+  border-left: 2px solid var(--faint-violet);
+  /* border-left-color: rgb(230, 236, 241); */
 }
 
 .right-side-toc .rightSideBarUL li a {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   line-height: 1.5;
   padding: 7px 24px 7px 16px;
   color: var(--charcoal);
+}
+.right-side-toc .rightSideBarUL li a.active,
+.right-side-toc .rightSideBarUL li a:hover {
+  color: var(--violet);
 }
 
 @media only screen and (max-width: 50rem) {
