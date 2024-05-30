@@ -4,6 +4,7 @@
   padding-left: 0;
   z-index: 100;
   transition: all 0.3s ease;
+  /* padding-bottom: 16px; */
 }
 @media (max-width: 1200px) {
   .sidebar-container {
@@ -32,19 +33,19 @@
 /* Track */
 .left-sidebar::-webkit-scrollbar-track,
 .modal-body::-webkit-scrollbar-track {
-  background: var(--faint-violet);
+  background: var(--faint-blue);
 }
 
 /* Handle */
 .left-sidebar::-webkit-scrollbar-thumb,
 .modal-body::-webkit-scrollbar-thumb {
-  background: #cdc9f7;
+  /* background: var(--blue); */
 }
 
 /* Handle on hover */
 .left-sidebar::-webkit-scrollbar-thumb:hover,
 .modal-body::-webkit-scrollbar-thumb:hover {
-  background: var(--violet);
+  background: var(--blue);
 }
 
 .left-sidebar::before {
@@ -75,7 +76,7 @@
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  background: var(--faint-blue);
+  /* background: var(--faint-blue); */
   margin-right: 10px;
   display: flex;
   justify-content: center;

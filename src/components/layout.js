@@ -23,14 +23,7 @@ const Layout = ({ children, location, edges }) => {
   return (
     <SidebarContextProvide edges={edges}>
       <Header location={location} />
-      {displayBanner && <HomeBanner />}
-      {/* <div className="landing-container">
-          <div>
-            <h1>Magic Pixel</h1>
-            <input type="text" className="search-bar" placeholder="Search..." />
-          </div>
-        </div> */}
-
+      {/* {displayBanner && <HomeBanner />} */}
       <MDXProvider components={mdxComponents}>
         <section className="container-fluid">
           <div className="row">

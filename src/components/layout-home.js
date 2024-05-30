@@ -35,25 +35,21 @@ const LayoutHome = ({ children, location, edges, metaTitle }) => {
       <Seo title={metaTitle} />
 
       <Header location={location} />
-      <HomeBanner />
-      {/* <div className="landing-container">
-          <div>
-            <h1>Magic Pixel</h1>
-            <input type="text" className="search-bar" placeholder="Search..." />
-          </div>
-        </div> */}
-
+      {/* <HomeBanner /> */}
       <MDXProvider components={mdxComponents}>
         <section className="container-fluid">
           <div className="row">
-            <div className="sidebar-container" ref={sidebarRef}>
+            <div className="sidebar-container pe-0" ref={sidebarRef}>
               <Sidebar location={location} />
             </div>
 
-            <div className="col pt-4">
+      <div className='col homeBannerWrapper'>
+            <HomeBanner/> 
+      <div className=" pt-4">
               <main>{children}</main>
               {/* <Footer /> */}
             </div>
+      </div>        
           </div>
         </section>
       </MDXProvider>

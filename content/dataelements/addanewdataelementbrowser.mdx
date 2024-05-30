@@ -1,6 +1,6 @@
 ---
 title: 'Add a New Data Element (Browser)'
-metaTitle: 'Add a New Data Element (Browser) | Magic Pixel'
+metaTitle: 'Add a New Data Element (Browser) | Ingest Labs'
 order: 2
 ---
 # Add a New Data Element (For Browser/Client-side)
@@ -13,7 +13,7 @@ Perform the following steps to create the Data elements on browser:
 
 2. Enter the following details in the New Data Element screen that appears.
 
-3. Select the Check box **Default Data Elements** to list the default data elements that are readily available in MagicPixel. The specific default template that is available will be used for the particular data elements.
+3. Select the Check box **Default Data Elements** to list the default data elements that are readily available in Ingest Labs. The specific default template that is available will be used for the particular data elements.
 
 ![addnewdataelements](/images/dataelementsimages/adddataelement.png)
 
@@ -28,26 +28,26 @@ Perform the following steps to create the Data elements on browser:
 | Description      | Enter the description of the Data Element. |
 | Is a Language Data Element?   | The language that must be essentially used in the particular website. There can be only one Language Data Element for a particular Data Element.|
 | Is a Privacy Compliance Data Element? | Denotes if the user or customer has provided consent for data collection. There can be only one Privacy Compliance Data Element for a particular Data Element. |
-| Choose Data Element Type | Denotes the data element type. <br /> • **URL Parameter**: Denotes the parameters that are fetched from the URL. <br /> • **Launch Data Element:** <br /> • **Custom JavaScript**: Includes the Custom Java Script code that the user provides as input. The code must be included in the Custom Java Script section while adding the Data Elements. <br /> •	**MagicPixel Data Layer:** Includes the Data Layer that the MagicPixel generates. You can specify the path in the Element Name that is basically a JSON object and provide the values that you can access.|
+| Choose Data Element Type | Denotes the data element type. <br /> • **URL Parameter**: Denotes the parameters that are fetched from the URL. <br /> • **Launch Data Element:** <br /> • **Custom JavaScript**: Includes the Custom Java Script code that the user provides as input. The code must be included in the Custom Java Script section while adding the Data Elements. <br /> •	**Ingest Labs Data Layer:** Includes the Data Layer that the Ingest Labs generates. You can specify the path in the Element Name that is basically a JSON object and provide the values that you can access.|
 
 5. You can select either the default or custom (user-defined) template.
  
-You must ensure to create the Data Elements in MagicPixel and then proceed further with the tag updates.
+You must ensure to create the Data Elements in Ingest Labs and then proceed further with the tag updates.
 The following table depicts the different Data Element types for both Browser-side and Server-side tag elements.
 
 | Data Element | Server | Browser | 
 | ----------- | ----------- | --------   |
-| JSON Path      | Yes      |     |
+| JSON Path      | Yes      |   -  |
 | URL Parameter   | Yes     |   Yes |
-| MagicPixel Data Layer Element | Yes | Yes |
+| Ingest Labs Data Layer Element | Yes | Yes |
 | Custom Java Script | Yes | Yes |
-| Server Header | Yes |    |
-| Server Cookie | Yes |    |
-| MagicPixel Internal | Yes | Yes |
-| MagicPixel Event Timestamp | Yes | Yes |
-| MagicPixel Event Name | Yes | Yes |
-| MagicPixel Event ID | Yes | Yes |
-| MagicPixel Identity | Yes | Yes |
+| Server Header | Yes |  -  |
+| Server Cookie | Yes |  -  |
+| Ingest Labs Internal | Yes | Yes |
+| Ingest Labs Event Timestamp | Yes | Yes |
+| Ingest Labs Event Name | Yes | Yes |
+| Ingest Labs Event ID | Yes | Yes |
+| Ingest Labs Identity | Yes | Yes |
 
 
 **URL Parameter**
@@ -59,7 +59,7 @@ Enter the following fields in the URL section of the screen.
 | Field Name      | Description |
 | ----------- | ----------- |
 | Parameter Name  | This is a mandatory field. Enter the parameter name.   |
-| Default value   | Represents the Default Value of the parameter. <br /> •	**Empty String**: Denotes that the data element is a string value. <br /> • **Undefined**: If the data element is not supposed to be used then select Undefined. <br /> • **Null**: Denotes the Null data type for the data element. <br /> • **Custom Value**: Denotes the static value for the Data Element. |
+| Default value   | Represents the Default Value of the parameter. <br /> •	**Empty String**: Denotes that the data element is a string value. <br /> • **Undefined**: If the data element is not supposed to be used then select **Undefined**. <br /> • **Null**: Denotes the Null data type for the data element. <br /> • **Custom Value**: Denotes the static value for the Data Element. |
 | Case-sensitive  | Select the Case-sensitive check box to make the default parameter case-sensitive. Else, clear the check box. |
 
 **Transformation Function**
@@ -68,7 +68,7 @@ Enter the following fields in the Transformation Function section.
 
 | Field Name      | Description |
 | ----------- | ----------- |
-| Default Functions   | • Clean: Clears and trims any white spaces on the trailing and leading strings after collecting the data value. <br /> • Lowercase: Denotes that the string needs to be in the lower-case.|
+| Default Functions   | • **Clean**: Clears and trims any white spaces on the trailing and leading strings after collecting the data value. <br /> • **Lowercase**: Denotes that the string needs to be in the lower-case.|
 | Custom Function |  Use Custom Function: For performing other transformations, you can write the code, retrieve or convert the value into a new value, and return the new value in the code using Custom function.|
 
 7.	Click **Save** to save the changes.

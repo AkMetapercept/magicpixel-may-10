@@ -1,0 +1,31 @@
+---
+title: 'Alarms'
+metaTitle: 'Alarms | Ingest Labs'
+order: 17
+---
+
+# Alarms
+
+Alarms are the notifications triggered by specific events or conditions within the Tag Manager of Ingest Labs. Alarm notifications can be set to alert users when a tag expires, or is about to expire, or when there is a sudden anomaly in the tag behavior.
+
+The two types of Alarms are **Tag Anomaly Detection Alarm** and the **Tag Expiration Alarm**.
+
+## Tag Anomaly Detection Alarm
+
+The tags are typically triggered consistently over time. This regular pattern is monitored using the Bollinger band. However, there could be an anomaly or an abnormal tag behavior with a sudden spike or drop in the tag trigger. You can configure alarms to detect such anomalies in the tag behavior and receive timely notifications.
+
+## Tag Expiration Alarm
+
+When configuring a tag within the Tag Manager, you can specify start and end dates for execution. Alarms can be set to notify configured contacts on tag expiry or just before tags expire. By default, if you do not select any criteria or filters while creating a new alarm, the alarm will be triggered for all configured tags within the project.
+
+Additionally, using the Tag Expiry Look Back feature, you can set alarms in advance, specifying the number of days before tag expiration for reminder notifications and the exact time for alarm triggering.
+
+# Related Topics
+
+The Alarms section includes the following topics:
+
+- [Alarms Screen](/alarms/alarmsscreen)
+- [Add a New Tag Anomaly Detection Alarm](/alarms/addanewalarmtaganomalydetectionalarm)
+- [Add a New Tag Expiration Alarm](/alarms/addanewalarmtagexpirationalarm)
+- [Edit an Alarm](/alarms/editanalarm)
+- [Delete an Alarm](/alarms/deleteanalarm)

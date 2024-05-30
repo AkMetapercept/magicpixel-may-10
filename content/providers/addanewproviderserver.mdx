@@ -1,6 +1,6 @@
 ---
 title: 'Add a New Provider (Server)'
-metaTitle: 'Add a New Provider (Server) | Magic Pixel'
+metaTitle: 'Add a New Provider (Server) | Ingest Labs'
 order: 3
 ---
 
@@ -8,7 +8,7 @@ order: 3
 
 For Server-side configuration, all the information is fetched from the server.
 
-To add a new Provider on MagicPixel, perform the following steps:
+To add a new Provider on Ingest Labs, perform the following steps:
 
 1. From the left navigation panel, select **Providers**.
 
@@ -18,47 +18,78 @@ To add a new Provider on MagicPixel, perform the following steps:
 
 ![addanewproviderserver](/images/providersimages/addproviderserver.png)
 
-3. Select a Provider Template.
+3. Select a Provider Template. Let’s take an example of the **Facebook Conversion API** provider template.
 
-![addanewproviderserver](/images/providersimages/providertemplateserver.png)
+![addfacebookprovidertemplate](/images/providersimages/AddFbCAPItemplate.png)
 
-4. Enter the Provider Name and Base URL under the Provider Details section.
+4. Ingest Labs configures the Provider Name and Base URL.
 
-![addanewproviderserver](/images/providersimages/templateserver.png)
+![configurednameandurl](/images/providersimages/configurednameandurl.png)
 
-5. Under the **Attributes** section, click Add Attribute at the bottom to add a new attribute. The Name, Value, and Settings information is visible.
+5. The values such as the API version and the Pixel Id are specific to every provider. You need the API version, Pixel ID, and Access token before you add a Facebook Conversion API template.
 
-**Note**: You can set the attribute to Mandatory, Ignore If Empty, Fatal, Hash (SHA256).
+6. To add a Facebook Conversion API Template, perform the following steps:
+  a. Navigate to the following URL to generate a Pixel Id, and an Access Token for the API version.
+  [Generate Pixel Id and Access Token](https://developers.facebook.com/docs/marketing-api/conversions-api/get-started)
+  b. Follow the steps mentioned on the webpage.
+
+**Add Attributes**
+The Attributes section consists of the following two sub-sections:
+-	User Data
+-	Custom Data
+![AddOptionalAttributes](/images/providersimages/AddOptionalAttributes.png)
+
+7. Under the **Attributes** section, click **Add Attribute** at the bottom to add a new attribute. The Name, Value, and Settings information is visible.
+![AddAttributes](/images/providersimages/ClickAddAttribute.png)
+
+**Note:** You can set the attribute to Mandatory, Ignore If Empty, Fatal, Hash (SHA256).
+
 - **Mandatory**: This value is mandatory.
+
 - **Fatal**: This value is mandatory.
-- **Ignore If Empty**: May be ignored if the value is not set.
+
+- **Ignore If Empty**: This may be ignored if the value is not set.
+
 - **HASH (SHA256)**: The value is converted to HASH format.
 
-![addanewproviderserver](/images/providersimages/attributesoptional.png)
+You can add additional attributes from 
+[FacebookCAPIParameters](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters)
 
-6.	To modify the settings, click the **Settings** icon on the bottom-right corner of the screen. 
+You can see a list of parameters here:
+
+![FacebookCAPIParameters](/images/providersimages/FacebookCAPIParameters.png)
+
+8. To add a new parameter from the Customer Information Parameters, for example, the **subscription Id**, perform the following steps:
+    a. In the JSON section, click Add Attribute. 
+![AddJSONAttribute](/images/providersimages/AddJSONAttribute.png)
+    b.	Add the exact field name under **User Data** and configure it with a data element that returns a subscription Id
+![Addsubscription_Id](/images/providersimages/AddSubscriptionId.png)
+9.	To modify the settings, click the **Settings** icon on the bottom-right corner of the screen. 
 
 ![addanewproviderserver](/images/providersimages/settings.png)
 
-7. Enter the Attribute Settings and click **Confirm** to save the changes.
+10. Enter the Attribute Settings and click **Confirm** to save the changes.
 
 ![addanewproviderserver](/images/providersimages/serverattributesettings.png)
 
-The following are the Data Type Conversion Types for the attributes.
+The following are the Data Type Conversions for the attributes.
 
 | Data Type      | Description |
 | ----------- | ----------- |
 | No Conversion   | Indicates that there is no conversion required for the data type.  |
 | Convert to Boolean   | Converts the input data to Boolean.     |
-| Convert to Number | Converts the input data to Number.|
+| Convert to Number | Converts the input data to a number.|
 | Convert to Array | Converts the input data to Array.|
 | Convert to Object Spread | Converts the JSON attributes under a parent level attribute to the root level attributes. |
 
-8. To delete the attribute, click the **Delete** icon.
-9.  Enter the fields in the HTTP Headers section. This section is optional.
+11. To delete the attribute, click the **Delete** icon.
+
+12.  Enter the fields in the HTTP Headers section. This section is optional.
 
 ![addanewproviderserver](/images/providersimages/httpheaders.png)
 
-10.	Enter the fields in the Connectors section and click **Save** to save the changes.
+13.	Enter the fields in the Connectors section and click **Save** to save the changes.
 
 ![addanewproviderserver](/images/providersimages/connectors.png)
+
+**Note:** Similarly, while adding any other provider template, for example, **TikTok Event API** Provider, click [TikTok Event API Provider](https://docs.apphud.com/docs/tiktok-events-api) to create a **Pixel Id** and **Access Token** and proceed as given in [Add a New Provider](https://magic-pixel.netlify.app/providers/addanewproviderserver/).  

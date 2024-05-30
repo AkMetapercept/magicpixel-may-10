@@ -1,0 +1,80 @@
+---
+title: 'Add a New Alarm (Tag Anomaly Detection Alarm)'
+metaTitle: 'Add a New Alarm (Tag Anomaly Detection Alarm) | Ingest Labs'
+order: 2
+---
+
+# Add a New Alarm (Tag Anomaly Detection Alarm)
+
+To add a new Tag Anomaly Detection Alarm, perform the following steps:
+
+1.	Select **Alarms** from the left navigation panel.
+
+![taganomalyalarm](/images/alarmsimages/taganomalyalarm.png)
+
+2.	Click **Add Alarm** on the top-right corner of the screen.
+
+![addalarm](/images/alarmsimages/addalarm.png)
+
+3. Select the **Tag Anomaly Detection Alarm**.
+
+**Step Result:** The New Anomaly Detection Alarm screen appears.
+
+![newanaomalydetection](/images/alarmsimages/newanomalydetection.png)
+
+4. Enter the following details in the New Anomaly Detection screen.
+
+| Field Name  | Description |
+| ----------- | ----------- |
+|Name      | The Alarm Name. |
+| Description | Enter the description of the Alarm. The description must be more than five characters.|
+|Environment | Select the Staging or the Production environment. |
+
+5. Enter the details mentioned in the **Settings** section.
+
+![alarmsettings](/images/alarmsimages/alarmsettings.png)
+
+**Threshold Sensitivity:** 
+
+- Select **High** sensitivity if you want to trigger an alarm at the slightest change in tag behavior. 
+- Select **Medium** sensitivity to trigger an alarm when there is a substantial change in tag behavior. 
+- Select **Low** sensitivity to trigger an alarm only if there is a huge change in tag behavior. 
+
+The Tag behavior is determined using the Bollinger Band.
+
+**Preferred Timings:** 
+
+Select the exact tag monitoring period from the **Preferred Timings** drop-down. This is an optional setting. For example, If there is a sudden spike in traffic in the evenings, you could set the preferred timing from 5 p.m. to 10 p.m. The tag firing activities will be monitored every evening between 5 p.m. to 10 p.m.
+
+**Note:** The tags are monitored continuously with a set preferred timing.
+
+6.	Enter the details in the **Filter Conditions** section.
+
+You can make the alarm more specific by creating monitors on specific tags, providers, or other attributes. To filter the alarms, perform the following steps:
+
+- On the alarm page, click **Add Filter**.
+
+| Field Name  | Description |
+| ----------- | ----------- |
+|Tag      | Specifies the tag to be monitored for anomaly detection. |
+| Page Name | Specifies the Page Name to be monitored for anomaly detection. <br /> Select either contains or is from the Operator drop-down menu.|
+|Provider | Specifies the Provider that needs to be monitored for anomaly detection.|
+|Device Type | Select this option to display devices such as **Desktop**, **Web**, **Mobile Web**, **Tablet**, and **Other**.|
+|OS | Select this option to display information regarding the OS such as **iOS** and **Android**. |
+| Language | Select this option to set the preferred language. |
+| Domain | Select the appropriate domain name. Select either **contains** or **is** from the **Operator** drop-down menu. |
+| Status | Select this option to set to one of the Tag trigger Statuses. <br /> • Success (200) <br /> • Success (202) <br /> • Provider Side Failure (400) <br /> • Provider Side Failure (404) <br /> • Provider Side Failure (500) <br /> • Tag Validation Failure (900) <br /> • Tag Validation Failure (1000) <br /> • Error (1001) <br /> • Privacy Blocked (1002) <br /> • Skipped (1003) <br /> • Success with Warnings (1004) <br /> • Scheduled for retry (1005) <br /> • Maximum retry attempts reached (1006) <br /> • Delayed (1007) |
+
+- Select the Operator options and select any operator to populate the list of available fields.
+
+![addfilter](/images/alarmsimages/addfilter.png)
+
+7. Select **Destinations** section.
+
+- **Select Notification Group**: The tag anomaly alert will be sent to the contacts configured in the selected notification group. In this step, you can select the check boxes or search for a particular group. 
+
+- **Provide Email ID**: Enter the email IDs of the users to send the notification for tag anomaly. You can add users using the **Add Users** tab.
+
+![addfilter](/images/alarmsimages/notificationgroup.png)
+
+8. Click **Save** to save the settings.

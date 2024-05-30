@@ -3,7 +3,7 @@ import Link from '../link.js';
 import Sidebar from '../sidebar/index.js';
 
 // ----------logo-----------------
-import logoImg from '../images/magicPixel.png';
+// import logoImg from '../images/magicPixel.png';
 // import ThemeToggle from './theme-toggle.js';
 import SearchModal from './search-modal.js';
 
@@ -47,7 +47,7 @@ const Header = ({ location }) => {
                     autoComplete="off"
                     readOnly
                   />
-                  <button type="submit" className="btn search-btn" value="Search">
+                  <button type="button" className="btn search-btn" value="Search">
                     <i className="fas fa-search" />
                   </button>
                 </form>
@@ -62,7 +62,7 @@ const Header = ({ location }) => {
                     readOnly
                   />
                   <button
-                    type="submit"
+                    type="button"
                     className="btn search-btn"
                     value="Search"
                     aria-label="Search"
@@ -72,7 +72,7 @@ const Header = ({ location }) => {
                 </form>
               </div>
 
-              <div className="social-icons d-none d-lg-flex gap-3 justify-content-center">
+              {/* <div className="social-icons d-none d-lg-flex gap-3 justify-content-center">
                 <a
                   href="https://twitter.com/1MagicPixel"
                   target="_blank"
@@ -108,7 +108,7 @@ const Header = ({ location }) => {
                 >
                   <i className="fa-brands fa-youtube"></i>
                 </a>
-              </div>
+              </div> */}
               {/* <ThemeToggle /> */}
             </div>
           </div>

@@ -70,7 +70,7 @@ const Footer = () => {
 
         <hr></hr>
         <small>
-          © 2024 <Link to="/">Magic Pixel.</Link> All Rights Reserved
+         Copyright © 2024 <Link to="/">Ingest Labs.</Link> All Rights Reserved
         </small>
       </footer>
     </>

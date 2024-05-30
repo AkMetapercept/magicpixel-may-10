@@ -5,7 +5,7 @@ const HomeBanner = () => {
     <div className="landing-container">
       <div className="container">
         <h1 className="name">Ingest Labs</h1>
-        <h4>Everything you need to get software documentation online.</h4>
+        <p className='sub-name'>Everything you need to get software documentation online.</p>
       </div>
     </div>
   );

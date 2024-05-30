@@ -33,16 +33,7 @@ const LayoutOther = ({ children, location, edges, metaTitle }) => {
   return (
     <SidebarContextProvide edges={edges}>
       <Seo title={metaTitle} />
-      <Header location={location} />
-      {/* <Search2 /> */}
-      {/* {displayBanner && <HomeBanner />} */}
-      {/* <div className="landing-container">
-          <div>
-            <h1>Magic Pixel</h1>
-            <input type="text" className="search-bar" placeholder="Search..." />
-          </div>
-        </div> */}
-
+      <Header location={location} />  
       <MDXProvider components={mdxComponents}>
         <section className="container-fluid">
           <div className="row">

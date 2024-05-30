@@ -37,7 +37,7 @@
 }
 .right-side-toc .rightSideBarUL li {
   list-style-type: none;
-  border-left: 2px solid var(--faint-violet);
+  border-left: 2px solid var(--faint-blue);
   /* border-left-color: rgb(230, 236, 241); */
 }
 
@@ -50,7 +50,8 @@
 }
 .right-side-toc .rightSideBarUL li a.active,
 .right-side-toc .rightSideBarUL li a:hover {
-  color: var(--violet);
+  color: var(--blue);
+  /* font-weight:bold ; */
 }
 
 @media only screen and (max-width: 50rem) {

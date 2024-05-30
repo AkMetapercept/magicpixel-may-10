@@ -1,6 +1,6 @@
 ---
 title: 'Add a New Tag (Browser)'
-metaTitle: 'Add a New Tag (Browser) | Magic Pixel'
+metaTitle: 'Add a New Tag (Browser) | Ingest Labs'
 order: 3
 ---
 
@@ -25,37 +25,39 @@ To add a new Tag for browser/client-side, perform the following steps:
 ![addanewtagbrowser](/images/tagsimages/providerbrowser.png)
 
 4. Select **Trigger**. 
-You can select either the User-defined Triggers or Default triggers using this option and click **Done**.
+
+You can select either the **User-defined** triggers or **Default** triggers and click **Done**.
 
 ![addanewtagbrowser](/images/tagsimages/choosetriggers.png)
 
 **Step Result:** The tag is triggered for the respective trigger data.
 
-5. Set **Qualification Criteria**.
+## Set Qualification Criteria
 
-The Qualification Criteria are the conditions/triggers that inform Magic Pixel when to trigger a particular tag. 
+The Qualification Criteria are the conditions/triggers that inform Ingest Labs when to trigger a particular tag. 
 In this step, you can add the Qualification Criteria for the tag in the **Qualification Criteria required** screen. You can add multiple Qualification Criteria and these criteria are layered.
 
 ![addanewtagbrowser](/images/tagsimages/addqualificationcriteria.png)
 
-6. Click **Add Qualification Criteria**.
-7. Select the **Data Elements** tab for the data elements to be set for the Qualification criteria.
+1. Click **Add Qualification Criteria**.
+
+2. Select the **Data Elements** tab for the data elements to be set for the Qualification criteria.
 
 ![addanewtagbrowser](/images/tagsimages/choosedataelements.png)
 
-8. Set **Tag Info**.
+## Set Tag Info
 
-This is the step where you can set a name and validity period for the tag. The default validity period is 1 year for any new tag that is created and can be set to any desired date. (To understand tag validity or expiry, see the section “Set the Validity period and Tag Expiry”:
+This is the step where you can set a name and validity period for the tag. The default validity period is one year for any new tag that is created and can be set to any desired date. To understand tag validity or expiry, see the section “Set the Validity period and Tag Expiry”:
 
 **Name:** The Tag name.
 
 **Validity Period:** Denotes the Validity period of the tag including Start Date and End Date.
 
-9. Set the **Validity Period** and **Tag Expiry**.
+## Set the Validity Period and Tag Expiry
 
-While creating a tag on Magic Pixel, you can set the validity period of a particular tag and define its expiry. The default validity period is one year for any new tag that is created and can be set to any desired date. When the expiry date is closer, you will receive reminder e-mail notification about the expiry of the tag. If no action is taken, the tag stops triggering post the set validity period. You can find all expired tags in the “Paused State” in the Publish section and can remove the same to reduce the size of your SDK.
+While creating a tag on Ingest Labs, you can set the validity period of a particular tag and define its expiry. The default validity period is one year for any new tag that is created and can be set to any desired date. When the expiry date is closer, you will receive reminder e-mail notification about the expiry of the tag. If no action is taken, the tag stops triggering post the set validity period. You can find all expired tags in the “Paused State” in the Publish section and reduce the size of your SDK.
 
-10. Set **Tag Query Parameters**.
+## Set Tag Query Parameters
 
 The Query parameters are a set of dynamic values included along with the Base URL while executing the query. These parameters appear in the Attributes section along with the values.
 
@@ -63,9 +65,9 @@ The Query parameters are a set of dynamic values included along with the Base UR
  
 Enter the Tag Query Parameters and the Full Tag URL.
 
-11. Set **Provider Attributes**.
+## Set Provider Attributes
 
-The Provider is a mandatory setting while adding a new tag. You can also create a new (custom) provider using the Providers option on the left navigation panel. You can add any number of Provider attributes using the Key-Value pair and configure the settings using the Settings option.
+The Provider is a mandatory setting while adding a new tag. You can also create a new (custom) provider using the Providers option on the left navigation panel. You can add any number of Provider attributes using the Key-Value pair and configure the settings using the **Settings** option.
 For a particular Provider attribute, you must set the value either from the Data Elements or Transformers.
 
 ![addanewtagbrowser](/images/tagsimages/setproviderattributes.png)
@@ -74,31 +76,37 @@ After selecting either from the Data Element or Transformer, the value appears i
 
 ![addanewtagbrowser](/images/tagsimages/providerattributesvalues.png)
 
-12. Set **Add Attributes**.
+## Set Add Attributes
 
 To add Attributes, select the **Add Attributes** and set the following values.
 
 ![addanewtagbrowser](/images/tagsimages/addattributes.png)
 
 **Name**: Set the Attribute name. For example: visitor_id, user_id, and so on.
+
 **Value**: Set the value either for the Data Element or Transformer.
+
 **JSON**: Enter the Attribute name and value, and configure the Settings.
+
 - Mandatory - Denotes the value to be mandatory.
--	Ignore If Empty - Ignore the field if empty.
--	Hash (SHA256) - denotes the value in the HASH format.
+
+- Ignore If Empty - Ignore the field if empty.
+
+- Hash (SHA256) - denotes the value in the HASH format.
 
 ![addanewtagbrowser](/images/tagsimages/addattributesjson.png)
 
 **Static**: Denotes the static Value that is known.
 
-**Attribute Settings**: 
-Enter the **Attribute Settings**.
+## Attribute Settings 
 
-**Tool-tip!** Select the **Mandatory** check box to display the **Fatal** Check box.
+1. Enter the **Attribute Settings**.
+
+**Tool-tip!** Select the **Mandatory** check box to display the **Fatal** check box.
 
 ![addanewtagbrowser](/images/tagsimages/attributesettings.png)
 
-13. Set the Data Type Conversion using the following options.
+2. Set the Data Type Conversion using the following options.
 
 | Data Type Conversion      | Description |
 | ----------- | ----------- |
@@ -108,7 +116,7 @@ Enter the **Attribute Settings**.
 | Convert to Array | Converts the input data to Array. |
 | Convert to Object Spread | Converts the JSON attributes under a parent level attribute to the root level attributes. |
 
-14. Select one of the following Transformer types and click **Confirm**.
+3. Select one of the following Transformer types and click **Confirm**.
 
 | Transformer Type      | Description |
 | ----------- | ----------- |
@@ -117,14 +125,17 @@ Enter the **Attribute Settings**.
 | Ignore if empty | May be ignored if the value is empty. |
 
 **Step Result:** The Provider Attribute is created.
+
 To delete the Provider Attribute, select the **Delete** icon at the right-hand corner of the screen.
 
-15. Denote the **Script**.
+4. Denote the **Script**.
 
 The Script denotes the code script if available for the tag. Select the **No Script** check box if the script is unavailable.
 
 ![addanewtagbrowser](/images/tagsimages/script.png)
 
-16. Set **Tag Attributes**.
+## Set Tag Attributes
+
 The Tag Attributes are detected from the placeholders in the Script.
+
 The syntax for a placeholder is {{YOURPLACEHOLDERHERE}}

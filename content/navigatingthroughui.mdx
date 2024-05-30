@@ -1,29 +1,33 @@
 ---
 title: 'Navigating Through UI'
-metaTitle: 'Navigating Through UI | Magic Pixel'
+metaTitle: 'Navigating Through UI | Ingest Labs'
 order: 2
 ---
 
 # Navigating Through UI
 
-This section explains the different tabs available on the MagicPixel UI screen after logging in to the application.
+This section explains the different tabs available on the Ingest Labs UI screen after logging in to the application.
 
 ## Products
-The **Products** section includes the list of products available for a particular project.
+
+The **Products** section includes the list of products available for a particular Ingest Labs project.
 
 ![products](/images/navigatingthroughuiimages/products.png)
 
 ## Info
+
 The **Info** section displays the information related to the product.
 
 ![info](/images/navigatingthroughuiimages/info.png)
 
 ## Users
-The **Users** section displays the number of users accessing the MagicPixel product and the roles allocated for a particular user..
+
+The **Users** section displays the number of users accessing the Ingest Labs product and the roles allocated for a particular user.
 
 ### Add a New User
 
 To add a new user, perform the following steps:
+
 1.	Click **Add User** on the top-right corner of the screen.
 
 ![addanewuser](/images/navigatingthroughuiimages/adduser.png)
@@ -41,43 +45,50 @@ To add a new user, perform the following steps:
 ![addanewuser](/images/navigatingthroughuiimages/info_roles.png)
 
 ## Roles
+
 The **Roles** section displays the multiple roles assigned to the particular user.
 
 ![assigntheroles](/images/navigatingthroughuiimages/roles.png)
 
 ### Assign the Roles
+
 Following are the steps to assign the roles to the user:
 
 #### Using Users section:
+
 1. Select the respective user and click **Edit**.
+
 2. Select the roles for the user from the drop-down list.
 
 ![assigntheroles](/images/navigatingthroughuiimages/rolesdropdown.png)
 
 3. Click **Save**.
+
 **Note:** You will receive an e-mail notification for any edits or modifications.
 
 #### Using the Roles section:
+
 1. Select the role to edit.
-2. Under the List of Users associated with this role, enter the user e-mail.
+
+2. Under the **List of Users associated with this role**, enter the user e-mail.
 
 ![Usingtherolessection](/images/navigatingthroughuiimages/listofusers.png)
 
 ### Delete the Roles
+
 You can delete the roles using the **Delete** icon at the right-hand corner of the screen.
-To delete the roles in the User section, you must unselect the roles of a particular user.
-and click **Save**.
+
+To delete the roles in the User section, you must unselect the roles of a particular user and click **Save**.
 
 ![Deletetheroles](/images/navigatingthroughuiimages/deleteroles.png)
 
 ## Usage
-The **Usage** option includes the real-time metrics and the data collected based on the number of days. By default, the data for the last seven days appears. 
 
-However, you can modify the number of days to view the metrics for a particular category.
+The **Usage** option includes the real-time metrics and the data collected based on the number of days. By default, the data for the last seven days appears. However, you can modify the number of days to view the metrics for a particular category.
 
 To view the usage details, select **Product -> Project -> Category**.
 
-**Note**: The Projects option is available only in Tag Manager. By default, All Projects is selected under **Projects** tab. 
+**Note**: The Projects option is available only in Tag Manager. By default, All Projects is selected under **Products** tab. 
 
 If there is no data available, then the following message appears:
 *“Metrics data is currently unavailable.”* 
@@ -86,7 +97,7 @@ The following are the default user options:
 
 | User Options      | Description |
 | ----------- | ----------- |
-| Tag Manager    | In Tag Manager, SDK enables the client website to trigger API calls to Magic Pixel. In the **Usage** option, the Tag Manager includes metrics that are collected in real-time during the server-side API calls. The Tag Manager consists of the following products: <br /> • Tag Manager <br /> • Id link |
+| Tag Manager    | In Tag Manager, SDK enables the client website to trigger API calls to Ingest Labs. In the **Usage** option, the Tag Manager includes metrics that are collected in real-time during the server-side API calls. The Tag Manager consists of the following products: <br /> • Tag Manager <br /> • Id link |
 | All Projects | You can select the specific project to collect the metrics using the **All Projects** drop-down. |
 | All Categories | Includes the following categories to collect the metrics: <br /> • Collector API Calls <br /> •	Server-Side Tag Count <br /> •	Server-Side Tag API Calls <br /> •	Collector Bot Traffic |
  
@@ -97,32 +108,42 @@ You can view the following details with the usage in each category:
 
 | Category      | Description |
 | ----------- | ------------- |
-| Collector API Calls   |  Denotes the number of Collector API calls from the website to MagicPixel servers.  |
-| Server-Side Tag Count   |  Denotes the number of Server-side tags triggered from MagicPixel servers.  |
-| Server-Side Tag API Calls | Denotes the number of Server-side API calls from the website to MagicPixel servers.|
-| Collector Bot Traffic | Denotes the number of API calls that MagicPixel servers detect as bot traffic.|
+| Collector API Calls   |  Denotes the number of Collector API calls from the website to Ingest Labs servers.  |
+| Server-Side Tag Count   |  Denotes the number of Server-side tags triggered from Ingest Labs servers.  |
+| Server-Side Tag API Calls | Denotes the number of Server-side API calls from the website to Ingest Labs servers.|
+| Collector Bot Traffic | Denotes the number of API calls that Ingest Labs servers detect as bot traffic.|
 
 The same categories are listed under the **All Categories** drop-down for a detailed view of the metrics. For example, to view the Collector API calls for the Last One Week, click Collector API Calls from the **All Categories** drop-down and select **Last One Week**. To view the graphical representation for the last one month, select **Last One Month** and click **Refresh**.
  
 **Id Link**
+
 The ID Link as a product does not include Projects drop-down option. You can select the particular category using the **All Categories** drop-down. The only category available under All Categories is **First Party ID Service**.
 
 ## Notifications
 
 The **Notifications** option displays the notifications triggered for a particular user. You can add any number of e-mail IDs for a Notification Group. The Notifications are triggered at the client level for alarms and other products.
-**Note**: While creating alarms, you can set a notification group e-mail for each alarm. The two types of alarms that are triggered under Tag Manager are: <br /> •	 Tag Expiration Alarm <br /> •	 Anomaly Detection Alarm
+
+**Note**: While creating alarms, you can set a notification group e-mail for each alarm. The two types of alarms that are triggered under Tag Manager are: <br /> •	Tag Anomaly Detection Alarm  <br /> • Tag Expiration Alarm  
 
 To add a new notification, perform the following steps:
+
 1.	Click **Add Notification** on the top-right corner of the screen.
 
 ![Notifications](/images/navigatingthroughuiimages/notifications.png)
 
 2.	In the Info screen, add the Name in the **Name** field.
+
 3.	Enter the Description.
-4.	Enter the e-mail ID in the Add New User field under Destinations section.
+
+4.	Enter the e-mail ID in the **Add New User** field under Destinations section.
+
 5.	Click **Save**.
 
+**Step Result:** The new notification is added.
+
 ## Integrations
+
+The Integrations section describes about the third-party integrations using the Auhtorization token. You can set the expiry of the token to 1 hour, 12 hours, and 72 hours accordingly.
 
 ![Integrations](/images/navigatingthroughuiimages/integrations.png)
 

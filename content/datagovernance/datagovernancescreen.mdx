@@ -1,6 +1,6 @@
 ---
 title: 'Data Governance Screen'
-metaTitle: 'Data Governance Screen | Magic Pixel'
+metaTitle: 'Data Governance Screen | Ingest Labs'
 order: 1
 ---
 
@@ -8,26 +8,26 @@ order: 1
 
 To navigate to the Data Governance screen, select **Data Governance** from the left navigation panel.
 
-The Data Governance screen lists all the providers that are configured in a particular project.
+The Data Governance screen lists all the providers configured in a particular project.
 
 ![datagovernance](/images/datagovernanceimages/datagovernancescreen.png)
 
-Each of these providers display the status as **Allowed** or **Blocked** on the right corner. 
+Each providers displays the status as **Allowed** or **Blocked** in the right corner. 
+When you create a new project, all providers are initially set to Allowed by default. 
 
-By default, all the providers are marked with Allowed status whenever a new project is created.
+Ingest Labs blocks or allows the triggering of tags based on the following conditions:
 
-Magic Pixel blocks or allows the triggering of tags based on the following conditions:
-- User consent received
+- User consent 
 - Provider settings
 
 The following table lists the two scenarios while triggering the tags.
 
 | Status      | pr_comp | provider_block_list | Trigger Tags |
 | ----------- | ----------- | ----------------|-------------|
-| User has provided consent for data tracking   | True   | Allowed | Yes |
-| User has provided consent for data tracking   | True   | Blocked | Yes |
-| User has not provided consent for data tracking | False | Allowed | Yes |
-| User has not provided consent for data tracking | False | Blocked | No |
+| User provides data tracking consent    | True   | Allowed | Yes |
+| User provides data tracking consent   | True   | Blocked | Yes |
+| User denies data tracking consent | False | Allowed | Yes |
+| User denies data tracking consent | False | Blocked | No |
 
-- The Providers in the **Allowed** state are allowed no matter is the value of pr_comp.
+- The Providers in the **Allowed** state are allowed despite the value of pr_comp.
 - The Providers in the **Blocked** state are allowed only when the pr_comp = True.

@@ -1,6 +1,7 @@
 import { Link } from 'gatsby';
 import React from 'react';
 import { useSidebarContext } from '../../context/sidebarContext';
+import HomeBanner from '../home-banner';
 
 const imageData = {
   aboutmagicpixel: '/landing-page/icons/blue/introduction.png',
@@ -19,6 +20,7 @@ const imageData = {
   datagovernance: '/landing-page/icons/blue/governance.png',
   settings: '/landing-page/icons/blue/settings.png',
   environments: '/landing-page/icons/blue/states.png',
+  alarms: '/landing-page/icons/blue/alarm.png',
 };
 
 const MdxCard = ({ data }) => {

@@ -22,6 +22,8 @@ const imageData = {
   'Data Governance': '/landing-page/icons/blue/governance.png',
   Settings: '/landing-page/icons/blue/settings.png',
   Environments: '/landing-page/icons/blue/states.png',
+  Alarms: '/landing-page/icons/blue/alarm.png',
+
 };
 const getImageForTitle = (title) => {
   // Check if the title exists in imageData

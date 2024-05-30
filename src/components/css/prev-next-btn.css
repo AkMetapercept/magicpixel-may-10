@@ -57,7 +57,7 @@
 
 .next-prev-section .nextBtn:hover .rightArrow,
 .next-prev-section .previousBtn:hover .leftArrow {
-  color: var(--violet);
+  color: var(--blue);
 }
 
 .next-prev-section .leftArrow {
@@ -93,7 +93,7 @@
   font-size: 16px;
   line-height: 1.5;
   font-weight: 500;
-  color: var(--violet);
+  color: var(--blue);
 }
 
 @media (max-width: 767px) {

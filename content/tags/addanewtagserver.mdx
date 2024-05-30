@@ -1,13 +1,15 @@
 ---
 title: 'Add a New Tag (Server)'
-metaTitle: 'Add a New Tag (Server) | Magic Pixel'
+metaTitle: 'Add a New Tag (Server) | Ingest Labs'
 order: 4
 ---
 
 # Add a New Tag (For Server-side)
 
 To add a new server-side tag, perform the following steps:
+
 1.	Select **Tags** from the left navigation panel.
+
 2.	Click **Add Tag -> For Server** on the top-right corner of the screen.
 
 ![addanewtagserver](/images/tagsimages/addanewtagserver.png)
@@ -22,27 +24,29 @@ To add a new server-side tag, perform the following steps:
 
 4. Select **Trigger**. 
 
-You can select either the User-defined Triggers or Default triggers using this option and click **Done**.
+You can select either the **User-defined** Triggers or **Default** triggers using this option and click **Done**.
+
 **Step Result:** The tag is triggered for the respective trigger data.
 
 ![addanewtagserver](/images/tagsimages/choosetriggers.png)
 
-5. Set **Qualification Criteria**.
+## Set Qualification Criteria
 
-Qualification Criteria of a tag are conditions/triggers that inform Magic Pixel when to trigger a particular tag. 
-In this step, you can add the Qualification Criteria for the tag in the **Qualification Criteria required** screen. You can add multiple Qualification Criteria and they will be layered.
+Qualification Criteria of a tag are conditions/triggers that inform Ingest Labs when to trigger a particular tag. 
+
+In this step, you can add the Qualification Criteria for the tag in the **Qualification Criteria required** screen. You can add multiple Qualification Criteria and these criteria are layered.
 
 ![addanewtagserver](/images/tagsimages/addnewtagserverqualificationcriteria.png)
 
-a. Click **Add Qualification Criteria**.
+1. Click **Add Qualification Criteria**.
 
-b. Select the **Data Elements** tab for the data elements to be set for the Qualification criteria.
+2. Select the **Data Elements** tab for the data elements to be set for the Qualification criteria.
 
 ![addanewtagserver](/images/tagsimages/choosedataelements.png)
 
-6. Set **Tag Info**.
+## Set Tag Info
 
-This is the step where you set a name and validity period for the tag. The default validity period is 1 year for any new tag that is created and can be set to any desired date. (To understand tag validity or expiry, see the section “Set the Validity period and Tag Expiry”:
+This is the step where you set a name and validity period for the tag. The default validity period is one year for any new tag that is created and can be set to any desired date. (To understand tag validity or expiry, see the section “Set the Validity period and Tag Expiry”:
 
 **Name:** The Tag name.
 
@@ -50,14 +54,18 @@ This is the step where you set a name and validity period for the tag. The defau
 
 ![addanewtagserver](/images/tagsimages/taginfovalidityperiod.png)
 
-7. Set the **Validity Period** and **Tag Expiry**.
-While creating a tag on Magic Pixel, you can set the validity period of a particular tag and define its expiry. The default validity period is one year for any new tag that is created and can be set to any desired date. When the expiry date is closer, you will receive reminder e-mail notification about the expiry of the tag. If no action is taken, the tag stops triggering post the set validity period. You can find all expired tags in the “Paused State” in the Publish section and can remove the same to reduce the size of your SDK.
+## Set the Validity Period and Tag Expiry
 
-8. Set **Tag Query Parameters**.
+While creating a tag on Ingest Labs, you can set the validity period of a particular tag and define tag expiry. The default validity period is one year for any new tag that is created and can be set to any desired date. When the expiry date is closer, you will receive reminder e-mail notification about the expiry of the tag. If no action is taken, the tag stops triggering post the set validity period. You can find all expired tags in the “Paused State” in the Publish section and you can remove the expired tags to reduce the size of your SDK.
+
+## Set Tag Query Parameters
+
+The Query parameters include the set of dynamic values that are included along with the Base URL while executing the query. These parameters appear in the Attributes section as well along with the values.
  
-9. Set **Provider Attributes**.
+## Set Provider Attributes
 
 The Provider is a mandatory setting while adding a new tag. You can also create a new (custom) provider using the Providers option on the left navigation panel. You can add any number of Provider attributes using the Key-Value pair and configure the settings using the Settings option.
+
 For a particular Provider attribute, you must set the value either from the Data Elements or Transformers.
 
 ![addanewtagserver](/images/tagsimages/setproviderattributes.png)
@@ -68,13 +76,16 @@ After selecting either from the Data Element or Transformer, the value appears i
 
 **Add Attributes**
 
-a. To add Attributes, select the **Add Attributes** and set the following values.
+1. To add Attributes, select the **Add Attributes** and set the following values.
 
 ![addanewtagserver](/images/tagsimages/addattributesserver.png)
 
 **Name**: Set the Attribute name. For example: visitor_id, user_id, and so on.
+
 **Value**: Set the value either for the Data Element or Transformer.
+
 **JSON**: Enter the Attribute name and value, and configure the Settings.
+
 - Mandatory - Denotes the value to be mandatory.
 - Ignore If Empty - Ignore the field if empty.
 - Hash (SHA256) - denotes the value in the HASH format.
@@ -85,12 +96,13 @@ a. To add Attributes, select the **Add Attributes** and set the following values
 
 **Attribute Settings**:
 
-b. Enter the **Attribute Settings**.
-**Tool-tip!** Select the **Mandatory** check box to display the **Fatal** Check box.
+2. Enter the **Attribute Settings**.
+
+**Tool-tip!** Select the **Mandatory** check box to display the **Fatal** check box.
 
 ![addanewtagserver](/images/tagsimages/serverattributesettings.png)
 
-c. Set the Data Type Conversion using the following options.
+3. Set the Data Type Conversion using the following options.
 
 | Data Type Conversion      | Description |
 | ----------- | ----------- |
@@ -100,7 +112,7 @@ c. Set the Data Type Conversion using the following options.
 | Convert to Array | Converts the input data to Array. |
 | Convert to Object Spread | Converts the JSON attributes under a parent level attribute to the root level attributes. |
 
-d. Select one the following Transformer types and click **Confirm**.
+4. Select one the following Transformer types and click **Confirm**.
 
 | Transformer Type      | Description |
 | ----------- | ----------- |
@@ -109,19 +121,25 @@ d. Select one the following Transformer types and click **Confirm**.
 | Ignore if empty | May be ignored if the value is empty. |
 
 **Step Result:** The Provider Attribute is created.
+
 To delete the Provider Attribute, select the **Delete** icon at the right-hand corner of the screen.
 
-10. Set **Tag Attributes**.
+## Set Tag Attributes
 
 To add Tag Attributes, click **Add Attribute**.
 
 ![addanewtagserver](/images/tagsimages/addattributesserver.png)
 
 **Name**: Set the Attribute name. For example: visitor_id, user_id, and so on.
+
 **Value**: Set the value either for the Data Element or Transformer.
+
 **JSON**: Enter the Attribute name and value, and configure the Settings.
+
 - Mandatory - Denotes the value to be mandatory.
+
 - Ignore If Empty - Ignore the field if empty.
+
 - Hash (SHA256) - denotes the value in the HASH format.
 
 **Static**: Denotes the static Value that is known.
@@ -130,12 +148,13 @@ To add Tag Attributes, click **Add Attribute**.
 
 **Attribute Settings**: 
 
-a. Enter the **Attribute Settings**.
-**Tool-tip!** Select the **Mandatory** check box to display the **Fatal** Check box.
+1. Enter the **Attribute Settings**.
+
+**Tool-tip!** Select the **Mandatory** check box to display the **Fatal** check box.
 
 ![addanewtagserver](/images/tagsimages/serverattributesettings.png)
 
-b. Set the Data Type Conversion using the following options.
+2. Set the Data Type Conversion using the following options.
 
 | Data Type Conversion      | Description |
 | ----------- | ----------- |
@@ -145,7 +164,7 @@ b. Set the Data Type Conversion using the following options.
 | Convert to Array | Converts the input data to Array. |
 | Convert to Object Spread | Converts the JSON attributes under a parent level attribute to the root level attributes.|
 
-c. Select one of the following Transformer types and click **Confirm**.
+3. Select one of the following Transformer types and click **Confirm**.
 
 | Transformer Type      | Description |
 | ----------- | ----------- |
@@ -155,14 +174,14 @@ c. Select one of the following Transformer types and click **Confirm**.
 
 **Step Result:** The Tag Attribute is created.
 
-11. Enable **Retry Configuration**.
+4. Enable **Retry Configuration**.
 
 ![addanewtagserver](/images/tagsimages/retryconfiguration.png)
 
-12. Enable **Delay Configuration**.
+5. Enable **Delay Configuration**.
 
 ![addanewtagserver](/images/tagsimages/delayconfiguration.png)
 
-13. Click **Save** to save the settings.
+6. Click **Save** to save the settings.
 
 **Step Result:** The new tag is created.

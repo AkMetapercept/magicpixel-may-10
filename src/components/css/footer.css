@@ -4,8 +4,8 @@ footer {
 }
 
 footer .social-icons a {
-  width: 45px;
-  height: 45px;
+  width: 30px;
+  height: 30px;
 }
 
 footer small {
@@ -14,7 +14,7 @@ footer small {
   font-size: 14px;
 }
 footer small a {
-  color: var(--violet);
+  /* color: var(--violet); */
   font-weight: 500;
 }
 

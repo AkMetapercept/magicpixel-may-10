@@ -24,23 +24,23 @@ header .navBarBrand img {
 }
 
 .social-icons a {
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--violet);
-  background-color: var(--faint-violet);
+  color:var(--blue);
+  /* background-color: var(--faint-violet); */
 
   font-size: 20px;
   transition: all 0.3s ease;
 }
 
-.social-icons a:hover {
+/* .social-icons a:hover {
   color: var(--blue);
   background-color: var(--faint-blue);
-}
+} */
 
 /* =================== theme toggle ===================== */
 
@@ -156,6 +156,7 @@ header .input:checked + .slider:before {
 /* ======================search input ======================= */
 header .top-search-box {
   width: 200px;
+  margin-right: 100px;
 }
 
 .form-control:hover,
@@ -173,7 +174,7 @@ header .search-form .search-input {
   padding-right: 3rem;
   padding-left: 1.5rem;
   height: 40px;
-  border-color: var(--violet);
+  border-color: var(--blue);
 }
 
 header .search-form .search-input:focus,
@@ -182,13 +183,65 @@ header .search-form .search-input:hover {
   cursor: pointer;
 }
 header .search-form .search-btn {
-  color: var(--violet);
+  color: var(--blue);
   background: none;
   border: none;
   position: absolute;
   right: 0;
   top: 0.15rem;
   margin-right: 0;
+
+  /* right: 1px;
+  top: 5px; */
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .search-container {
+      flex-direction: row;
+      justify-content: space-between;
+  }
+
+  header .search-form .search-btn {
+    right: 1px;
+    top: 5px;
+  }
+}
+
+/* Tablet View */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .search-container {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  .search-icon {
+    right: 1px;
+    top: 3px;
+  }
+}
+
+
+/* Desktop View */
+@media (min-width: 769px) {
+  .search-container {
+      flex-direction: row;
+      justify-content: flex-start;
+  }
+
+  .search-icon {
+      margin-left: 10px;
+      margin-top: 0;
+  }
+
+}
+
+
+header .search-form .search-btn ::after{
+    
+  right: 1px;
+  top: 6px;
 }
 
 header .top-search-box-mobile {
